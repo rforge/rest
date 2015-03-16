@@ -111,6 +111,30 @@ new.frames <- .add.frame(Tab=Tab,type=type,
 		title=title,border=border,new.frames=new.frames)
 
 
+#### LIST BOX FRAME ####
+
+type <- "listbox"
+
+# Change variables accordingly:
+frame.name <- "listboxframe1"
+arguments <- "listboxarg"		 
+argument.names <- c("Value 1","Value 2","Value 3")
+argument.values <- c("value1","value2","value3")
+argument.types <- "char"   		  
+initial.values <- c("value3")    
+length <- 4  
+select.multiple <- FALSE
+title <- "A list box:"
+border <- TRUE
+
+# DO NOT CHANGE THIS LINE:
+new.frames <- .add.frame(Tab=Tab,type=type,
+		frame.name=frame.name,argument.names=argument.names,
+		arguments=arguments,argument.values=argument.values,
+		argument.types=argument.types, initial.values=initial.values,
+		length=length,select.multiple=select.multiple,
+		title=title,border=border,new.frames=new.frames)
+
 #### MANUAL BUTTONS FRAME ####
 
 type <- "buttons"

@@ -15,6 +15,10 @@
 GUI_template <- function(dialogtitle="",helppage="",usetabs=FALSE,tabnames=c(),make.resetgws.button=FALSE,make.setwd.button=FALSE,make.help.button=FALSE,make.seed.button=FALSE,grid.config=grid.config,grid.rows=grid.rows,new.frames){
 	
 	
+	if(dialogtitle==""){
+		stop("No dialogtitle was defined!")
+	}
+	.updateEnvirObject(dialogtitle,ENVIR=environment())
 	
 	#########################################################################################################################################################
 	## General preparation ##
@@ -317,6 +321,47 @@ GUI_template <- function(dialogtitle="",helppage="",usetabs=FALSE,tabnames=c(),m
 				
 			}
 			
+			######    LIST BOX    ########################################################################################
+			
+			if(current.frame$type=="listbox"){
+				
+				# Make title when NOT using a border (special case of 'title = "a title"' & 'border=FALSE')
+				
+				if(current.frame$title!="" & current.frame$border==FALSE){
+					tkgrid(labelRcmdr( current.frame$frame,fg=getRcmdr("title.color"),font="RcmdrTitleFont"   ,text=gettextRcmdr(current.frame$title)),sticky="nw")
+					
+				}
+				
+				
+				
+				selectmode <- ifelse(current.frame$select.multiple,"multiple","single")
+				height <- current.frame$length
+								
+				
+				current.frame$listboxFrame <- tkframe(current.frame$frame)
+				
+				
+				current.frame$listBox <- tklistbox(current.frame$listboxFrame,height=height,exportselection="FALSE",selectmode=selectmode,background="white")
+				for(listname in current.frame$argument.names) tkinsert(current.frame$listBox,"end",listname)
+				
+				
+				eval(parse(text=paste0("current.frame$listScroll <- ttkscrollbar(current.frame$listboxFrame,command=function(...){tkyview(new.frames[[",Tab,"]][[",ii,"]]$listBox, ...)})")))
+				eval(parse(text=paste0("tkconfigure(current.frame$listBox, yscrollcommand=function(...){tkset(new.frames[[",Tab,"]][[",ii,"]]$listScroll, ...)})")))
+				
+				if(length(current.frame$argument.names)!=0){tkselection.set(current.frame$listBox,0)}
+				
+				tkgrid(current.frame$listBox,current.frame$listScroll)
+				tkgrid.configure(current.frame$listScroll,sticky="ns")
+				
+				tkgrid(current.frame$listboxFrame,sticky="nw")
+				
+				if(current.frame$border==TRUE){tkgrid.configure(current.frame$listboxFrame,padx="5",pady="2")}
+	
+				new.frames[[Tab]][[ii]] <- current.frame
+				
+			}
+			
+			
 			
 			###### MANUAL BUTTONS ########################################################################################
 			
@@ -348,7 +393,7 @@ GUI_template <- function(dialogtitle="",helppage="",usetabs=FALSE,tabnames=c(),m
 				
 				if(current.frame$button.otherarg!=""){
 					# NOTE: AT THE MOMENT THE USER NEEDS TO DECIDE ITSELF IF A ',' IS NECESSARY, AUTOMATE?
-					# NOTE2: You can always use a ','
+					# NOTE2: You should always use a ','
 					function.command <- paste(function.command,current.frame$button.otherarg,sep="")
 					
 				}

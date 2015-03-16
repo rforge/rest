@@ -4,7 +4,7 @@
 ###############################################################################
 
 
-.add.frame <- function(Tab,type,frame.name,argument.names="",arguments="",initial.values=c(),title="",border=FALSE,entry.width="2",argument.values=c(),argument.types=c(),from=c(),to=c(),by=c(),length=c(),button.name="",button.function="",button.data="",arg.frames=c(),button.otherarg="",button.object="",button.width="12",button.data.transf="matrix",save=TRUE,show.save=TRUE,show=TRUE ,new.frames=new.frames){
+.add.frame <- function(Tab,type,frame.name,argument.names="",arguments="",initial.values=c(),title="",border=FALSE,entry.width="2",argument.values=c(),argument.types=c(),from=c(),to=c(),by=c(),length=c(),select.multiple=FALSE,button.name="",button.function="",button.data="",arg.frames=c(),button.otherarg="",button.object="",button.width="12",button.data.transf="matrix",save=TRUE,show.save=TRUE,show=TRUE ,new.frames=new.frames){
 	
 	
 	# Entry Fields
@@ -54,6 +54,16 @@
 	# Spin Boxes
 	if(type=="spinboxes"){
 		new <- list(type=type,frame.name=frame.name,argument.names=argument.names,arguments=arguments,initial.values=initial.values,from=from,to=to,by=by,entry.width=entry.width,title=title,border=border)
+		
+		new.frames[[Tab]][[length(new.frames[[Tab]])+1]] <- new
+		new.frames <- .order.button.frames(new.frames,Tab)
+		return(new.frames)
+
+	}
+	
+	# List Boxes
+	if(type=="listbox"){
+		new <- list(type=type,frame.name=frame.name,argument.names=argument.names,arguments=arguments,argument.values=argument.values,argument.types=argument.types,initial.values=initial.values,length=length,select.multiple=select.multiple,title=title,border=border)
 		
 		new.frames[[Tab]][[length(new.frames[[Tab]])+1]] <- new
 		new.frames <- .order.button.frames(new.frames,Tab)
@@ -289,6 +299,42 @@
 		return(command)
 	}
 	
+	if(current.frame$type=="listbox"){
+		
+		sel <- as.integer(tkcurselection(current.frame$listBox))+1
+		
+		command <- paste0(command,",",current.frame$arguments,"=")
+		
+		
+		if(current.frame$select.multiple==TRUE){
+			add.command <- paste0("c(")
+			if(current.frame$argument.types=="char"){chartype <- TRUE}else{chartype <- FALSE}
+			
+			for(i.sel in sel){
+				if(chartype){
+					add.command <- paste0(add.command,"'",current.frame$argument.values[i.sel],"'")
+				}
+				else{
+					add.command <- paste0(add.command,current.frame$argument.values[i.sel])
+				}
+				
+				if(!(i.sel==sel[length(sel)])){add.command <- paste0(add.command,",")}
+			}
+			add.command <- paste0(add.command,")")
+			
+		}
+		else{
+			if(current.frame$argument.types=="char"){
+				add.command <- paste0("'",current.frame$argument.values[sel],"'")
+			}
+			else{
+				add.command <- paste0(current.frame$argument.values[sel])
+			}
+		}
+		
+		command <- paste0(command,add.command)	
+	}
+	
 	
 }
 
@@ -372,11 +418,48 @@ LoadGUI <- function(){
 
 .updateEnvirObject <- function(name,ENVIR){
 	
-	#GUI_envir <- new.env(parent=.GlobalEnv)
 	
-	#ls(envir=GUI_envir)
+	if(is.null(.GetEnvREST("GUI_envir"))){
+		GUI_envir <- list()
+		.AssignEnvREST("GUI_envir",GUI_envir)
+	}
 	
+	GUI_envir <- .GetEnvREST("GUI_envir")
+	if(name %in% names(GUI_envir)){
+		index.env <- which(name==names(GUI_envir))
+		
+		temp.env <- GUI_envir[[index.env]]
+		rm(list=ls(temp.env),envir=temp.env)
+	}
+	else{
+		index.env <- length(GUI_envir)+1
+	}
+	GUI_envir[[index.env]] <- ENVIR
+	names(GUI_envir)[index.env] <- name
 	
+	.AssignEnvREST("GUI_envir",GUI_envir)
+
 }
 
 
+.EnvREST <- new.env()
+
+
+.GetEnvREST <- function(x){
+	if(!exists(x,envir=.EnvREST,inherits=FALSE)){
+		return(NULL)
+	}
+	else{
+		return(get(x=x,envir=.EnvREST,inherits=FALSE))
+	}
+	
+}
+
+.AssignEnvREST <- function(x,value){
+	assign(x=x,value=value,envir=.EnvREST)
+}
+
+
+GetWindowsENVIR <- function(){
+	return(.GetEnvREST("GUI_envir"))
+}

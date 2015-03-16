@@ -73,7 +73,7 @@
 }
 
 
-\title{RcmdrPlugin Easy Script Templates 0.1.0}
+\title{RcmdrPlugin Easy Script Templates 0.2.0}
 \author{Ewoud De Troyer}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
@@ -314,11 +314,11 @@ store information in about your window you are about to create.
 \end{kframe}
 \end{knitrout}
 \noindent The scripts starts by filling in some information about your
-new window. A clarifying example follows later in which we make a window the the
+new window. A clarifying example follows later in which we make a window of the
 biclustering plaid method.
 \begin{description}
   \item[$\bullet$ \texttt{dialogtitle}:] The title of the window which will be
-  shown on top. 
+  shown on top. (This can not be empty!)
   
   \item[$\bullet$ \texttt{usetabs}:] Logical value determining if tabs should be
   used.
@@ -517,9 +517,9 @@ c.}{\it No Title \& Border}
 
 \noindent {\bf Entry Fields}\\
 \noindent The first type of frame is the entry fields frame. It can be used for
-both numerical arguments and character arguments of your biclustering function.
-Multiple entries can be added in one frame which will be placed below each
-other.
+both numerical arguments and character arguments of your function tied to a
+button. Multiple entries can be added in one frame which will be placed below
+each other.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{figures/entryfields.png}
@@ -534,14 +534,15 @@ other.
   appear in the window.
   \item[$\bullet$ \texttt{argument.types}:] A vector defining if the argument is
   \verb|"num"| or \verb|"char"|. This basically just means if there should be a
-  ' ' around the value when filling it in in the biclustering function. (e.g. In
+  ' ' around the value when filling it in in the function. (e.g. In
   Figure \ref{entryfields} the arguments would be filled in as \verb|,arg1=1,arg2=2,arg3='a'|)
   \item[$\bullet$ \texttt{arguments}:] The actual argument names, used for the
-  biclustering function.
+  function.
   \item[$\bullet$ \texttt{initial.values}:] A vector containing the initial
   values in the entry fields.
   \item[$\bullet$ \texttt{title}:] Optional title for the frame (\verb|""| means no title)
-  \item[$\bullet$ \texttt{border}:] Logical value determining the presence. 
+  \item[$\bullet$ \texttt{border}:] Logical value determining the presence of a
+  border.
   \item[$\bullet$ \texttt{entry.width}:] A vector containing the width of the
   entry fields (1 width = 1 number/character).
 \end{description}
@@ -564,11 +565,12 @@ boxes can be added below each other.
   \item[$\bullet$ \texttt{argument.names}:] The argument names how they will
   appear in the window.
   \item[$\bullet$ \texttt{arguments}:] The actual argument names, used for the
-  biclustering function.
+  function.
   \item[$\bullet$ \texttt{initial.values}:] A vector containing the initial
   values in the entry fields. (0 for \verb|FALSE|, 1 for \verb|TRUE|)
   \item[$\bullet$ \texttt{title}:] Optional title for the frame (\verb|""| means no title)
-  \item[$\bullet$ \texttt{border}:] Logical value determining the presence. 
+  \item[$\bullet$ \texttt{border}:] Logical value determining the presence of a
+  border. 
 \end{description}
 
 
@@ -588,17 +590,18 @@ finite number of values.
   \item[$\bullet$ \texttt{argument.names}:] The names of the buttons how they
   will appear in the window.
   \item[$\bullet$ \texttt{arguments}:] The actual argument name, used for the
-  biclustering function.
+  function. (Only 1 argument!)
   \item[$\bullet$ \texttt{argument.types}:] Just as for the entry fields, this
   will determine of the values are filled in with or without ''. The two options
   are again \verb|"num"| and \verb|"char"|, but in contrast with the entry
-  fields it is now only one value and not a vector..
+  fields it is now only one value and not a vector.
   \item[$\bullet$ \texttt{argument.values}:] The actual values of the radio buttons 
-that correspond to the values passed to biclustering function. 
+that correspond to the values passed to the function. 
     \item[$\bullet$ \texttt{initial.values}:] The initial value of the radio
   buttons. It will determine which button is selected on opening the window.
   \item[$\bullet$ \texttt{title}:] Optional title for the frame (\verb|""| means no title)
-  \item[$\bullet$ \texttt{border}:] Logical value determining the presence.   
+  \item[$\bullet$ \texttt{border}:] Logical value determining the presence of a
+  border.   
 
 \end{description}
 
@@ -620,7 +623,7 @@ current value of the slider will always appear on top of it.
   \item[$\bullet$ \texttt{argument.names}:] The argument names how they will
   appear in the window.  
   \item[$\bullet$ \texttt{arguments}:] The actual argument names, used for the
-  biclustering function.  
+  function.
   \item[$\bullet$ \texttt{initial.values}:] Vector of initial values of the
   sliders.
   \item[$\bullet$ \texttt{from}:] Vector of starting points of the sliders.
@@ -630,7 +633,8 @@ current value of the slider will always appear on top of it.
   \item[$\bullet$ \texttt{length}:] Vector containing the lengths of the
   sliders.
   \item[$\bullet$ \texttt{title}:] Optional title for the frame (\verb|""| means no title)
-  \item[$\bullet$ \texttt{border}:] Logical value determining the presence.   
+  \item[$\bullet$ \texttt{border}:] Logical value determining the presence of a
+  border.   
   
 \end{description}
 
@@ -652,7 +656,7 @@ values. Just as for sliders, multiple spin boxes can be placed below each other.
   \item[$\bullet$ \texttt{argument.names}:] The argument names how they will
   appear in the window.  
   \item[$\bullet$ \texttt{arguments}:] The actual argument names, used for the
-  biclustering function.  
+  function.
   \item[$\bullet$ \texttt{initial.values}:] Vector of initial values of the
   spin boxes.
   \item[$\bullet$ \texttt{from}:] Vector of starting points of the spin boxes.
@@ -662,9 +666,51 @@ values. Just as for sliders, multiple spin boxes can be placed below each other.
   \item[$\bullet$ \texttt{entry.width}:] Width of all the spinboxes (one value
   which applies to all of them)
   \item[$\bullet$ \texttt{title}:] Optional title for the frame (\verb|""| means no title)
-  \item[$\bullet$ \texttt{border}:] Logical value determining the presence.   
+  \item[$\bullet$ \texttt{border}:] Logical value determining the presence of a
+  border.   
   
 \end{description}
+
+\noindent {\bf List Box}\\
+\noindent The next type is called a list box. This box corresponds with 1
+argument for which several values are available. With the list box it is possible to select
+one or multiple from the box, putting them in a vector.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{figures/listbox.png}
+\caption{{\it List Box: Code + Example}
+\label{listbox}}
+\end{figure}
+
+\noindent {\it List Box Variables:}
+\begin{description}
+  \item[$\bullet$ \texttt{frame.name}:] The unique name of this frame. (Which is used in the grid matrix)
+  \item[$\bullet$ \texttt{arguments}:] The actual argument name, used for the
+  function. (Only 1 argument!)
+  \item[$\bullet$ \texttt{argument.names}:] The labels of the items how they
+  will appear in the box.
+  \item[$\bullet$ \texttt{argument.values}:] The actual values of the list items 
+  that correspond to the values passed to the function. 
+  \item[$\bullet$ \texttt{argument.types}:] Just as for the entry fields, this
+  will determine of the values are filled in with or without ''. The two options
+  are again \verb|"num"| and \verb|"char"|, but in contrast with the entry
+  fields it is now only one value and not a vector. (Same as for radio buttons)
+  \item[$\bullet$ \texttt{initial.values}:] The initial value of the list box.
+  It will determine which list item is selected on opening the window.
+  \item[$\bullet$ \texttt{length}:] A value corresponding with the height of the
+  box. (If no value, \verb|c()|, is given, the length of the \verb|argument.names| will be used)
+  \item[$\bullet$ \texttt{select.multiple}:] A logical value determining if it
+  should be possible selecting only 1 or multiple list items. For example if the
+  \verb|argument.types| would be \verb|"char"| and \verb|select.multiple| would
+  be \verb|FALSE|, then an example would be simply \verb|'value1'|. If the
+  latter would have been \verb|TRUE|, the result would look like
+  \verb|c('value1','value3')|. (In the case those were selected)
+  \item[$\bullet$ \texttt{title}:] Optional title for the frame (\verb|""| means
+  no title)
+  \item[$\bullet$ \texttt{border}:] Logical value determining the presence of a
+  border.   
+\end{description}
+
 
 \noindent {\bf Manual Buttons}\\
 The last type of frame which can be utilized, is making manual buttons. There
@@ -900,7 +946,123 @@ Figure \ref{doitandprint_example}, accompanied by the plot in a graphics device.
 
 
 \subsubsection{Window Environments}
-Coming Soon
+\noindent When an window is being created, all the variables (such as
+\verb|new.frames|) are being saved in a certain environment. You could see this
+as a box in which all the parameters and variables connected with this window
+reside. By using the \verb|GetWindowsENVIR()| function, you will get back a
+\verb|list| object of which each element corresponds with a window which has
+been used. The name of such a list element is the \verb|dialogtitle| and the
+element itself is the created environment. Also remember that each time you
+reopen a window, the environment will change to a new one and if you call the
+\verb|list| object again, this change will be visible here too.\\
+Now you might wonder why knowing this environment could be useful. By having
+access to these variables of another window, you can change these at all times,
+giving your GUI even more flexibility.\\
+An easy example could be that you have a button called {\it `Presets'} on your
+main window. Pressing this button would then open up a new window in which the
+user can select with a radio button which one of the presets it would like
+(Preset 1, Preset 2,...). In this new window the user could then click on an
+{\it OK} button. The function tied to this button would then, with the above
+described process, change all the inputs in the main window before closing down
+the second window.
+\\
+While this can be done manually, to facilitate this process, some functions were
+created for the most used application, namely changing what the user can enter
+in the GUI. (An example will be given too for more clarification)
+\\ \\
+{\bf \underline{Functions}}
+\\ \\
+\noindent \verb|ChangeWindow(dialogtitle,tab=1,framename,argument,new.value)|
+\\ \\
+\noindent {\it Description:}\\
+\noindent This function will change the value the user can choose/enter in the
+frames. The behaviour is a bit different for the types of frames. See
+\verb|new.value| for more details.
+\begin{description}
+  \item[$\bullet$ \texttt{dialogtitle}:] The title of window which is going to
+  be altered. This should be the same as \verb|dialogtitle| in your window
+  script.
+  \item[$\bullet$ \texttt{tab}:] The number of the tab in which you want
+  something changed. (If no tabs are used, choose number 1)
+  \item[$\bullet$ \texttt{framename}:] The name of the frame in which something
+  is going to be changed. (Same name as in the window script)
+  \item[$\bullet$ \texttt{argument}:] The name of the argument in which
+  something should be changed. (Same as in the window script)
+  \item[$\bullet$ \texttt{new.value}:] The new value which should be entered for
+  this argument in this particular frame. \verb|new.value| should almost always
+  be a character (string), unless you are using it to change something in a list
+  box.
+  \begin{description}
+    \item[$\triangleright$ {\it Entry Fields:}] \verb|new.value| should be a
+    character/string (can be anything) which will then be pasted in entry field
+    of the chosen argument. (e.g. \verb|"5"|, \verb|"c(1,2,3)"| or \verb|"c('one','two')"|)
+    \item[$\triangleright$ {\it Check Boxes:}] \verb|new.value| should be
+    either \verb|"0"| or \verb|"1"| which corresponds with unchecked and
+    checked.
+    \item[$\triangleright$ {\it Radio Buttons:}] \verb|new.values| should be
+    that one of the \verb|argument.values| you wish to be selected
+    \item[$\triangleright$ {\it Value Sliders:}] \verb|new.values| should be a
+    character containing the numerical value you want the slider to be on. (e.g.
+    \verb|"10"|) Note that this value will be rounded to one of the possible
+    positions of the slider.
+    \item[$\triangleright$ {\it Spin Boxes:}] \verb|new.values| should be a
+    character containing the numerical value you want to spinbox to have. (e.g.
+    \verb|"5"|) Note that this value will be rounded to one of the possible
+    values the spin box can take.
+    \item[$\triangleright$ {\it List Box:}] Instead of simply changing which
+    items are selected in the box, \verb|new.values| will instead change the
+    items which should be available in the box. In this case, \verb|new.values|
+    should be a data frame consisting out of 2 columns. The first column should
+    contain the new \verb|argument.names| and the second the new \verb|argument.values|.
+
+  \end{description}
+\end{description}
+\noindent \verb|CancelWindow(dialogtitle)|
+\\ \\
+\noindent {\it Description:}\\
+This function will close down the chosen window.
+\begin{description}
+  \item[$\bullet$ \texttt{dialogtitle}:] The title of the window which should be
+  destroyed. This should be the same \verb|dialogtitle| as in the window script.
+   
+\end{description}
+{\bf \underline{Example}}
+\\ \\
+\noindent In this example (Figure \ref{windowenvir_example}) we have a main window called {\it `Example'} which
+has initially an empty entry field after `Values?'. Clicking the {\it Choose}
+button opens up a new window called {\it `Choosing'}. In this new window the
+user can select one or multiple values in a list box and after pressing {\it
+Ok}, they will appear in vector format in the earlier mentioned empty entry
+field before the new {\it Choosing} window closes down.\\
+The code for the relevant frames is given in Figure \ref{windowenvir_example}
+together with the function tied to the {\it Ok} button. Note that to save some
+space, the \verb|.add.frame| line was omitted in these frame scripts.
+\\ \\
+First, you can already see that the function tied to the {\it Choose} button is
+simply the \verb|choose_WINDOW| function without any arguments (\verb|arg.frames <- c()|). 
+The function tied to the {\it Ok} button, \verb|setentry_example|, has 1
+argument (\verb|values|) which comes from \verb|"listboxframe1"|. This is again
+defined by the \verb|arg.frames| for the {\it Ok} button. \\
+The first thing \verb|setentry_example| does is converting \verb|values| to a
+character format in \verb|new.value|. For example in this example
+\verb|c("value1","value3")| becomes \verb|"c('value1','value3')"|. Next, this
+\verb|new.value| is entered in the entry field by using the \verb|ChangeWindow|
+function on the \verb|"Example"| window, first tab, \verb|"entryframe1"|
+frame and \verb|"arg1"| argument.\\
+Lastly the {\it `Choosing'} window is closed down by using the
+\verb|CancelWindow| function.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{figures/windowenvir_example.png}
+\caption{Window Environments - Example (Code + Window)\label{windowenvir_example}}
+\end{figure}
+% Also explain rewritten when reopened. + stays if not open + explain use of window from window
+%ChangeWindow
+%CancelWindow
+%GetWindowsENVIR
+% ADD EXAMPLE
 
 \newpage
 
@@ -1145,6 +1307,30 @@ new.frames <- .add.frame(Tab=Tab,type=type,
         from=from,to=to,by=by,entry.width=entry.width,
         title=title,border=border,new.frames=new.frames)
 
+#### LIST BOX FRAME ####
+	
+type <- "listbox"
+	
+# Change variables accordingly:
+frame.name <- "listboxframe1"
+arguments <- "listboxarg"		 
+argument.names <- c("Value 1","Value 2","Value 3")
+argument.values <- c("value1","value2","value3")
+argument.types <- "char"   		  
+initial.values <- c("value3")    
+length <- 4 
+select.multiple <- FALSE
+title <- "A list box:"
+border <- TRUE
+	
+# DO NOT CHANGE THIS LINE:
+new.frames <- .add.frame(Tab=Tab,type=type,
+    frame.name=frame.name,argument.names=argument.names,
+    arguments=arguments,argument.values=argument.values,
+    argument.types=argument.types, initial.values=initial.values,
+    length=length,select.multiple=select.multiple,
+    title=title,border=border,new.frames=new.frames)
+
 
 #### MANUAL BUTTONS FRAME ####
 
@@ -1381,6 +1567,231 @@ plaid_WINDOW <- function(list.info=list()){
       tabnames,grid.config=grid.config,grid.rows=grid.rows,new.frames=new.frames)
 	
 }
+\end{verbatim}
+\subsection{Window Environment Example}
+\begin{verbatim}
+main_WINDOW <- function(list.info=list()){
+	
+	##########################
+	## PREAMBLE/INFORMATION ##
+	##########################
+	
+	dialogtitle <- "Example"
+		
+	usetabs <- FALSE
+	
+	tabnames <- c("Biclustering","Plot & Diagnostics")
+	
+	if(usetabs){ntabs <- length(tabnames)} else {ntabs <- 1}
+	new.frames <- .initialize.new.frames(ntabs)
+	grid.config <- .initialize.grid.config(ntabs)
+	grid.rows <- .initialize.grid.rows(ntabs)
+		
+	helppage <- ""
+		
+	##################
+	## GRID BUTTONS ##
+	##################
+	
+	make.help.button <- FALSE
+	make.setwd.button <- FALSE
+	make.resetgws.button <- FALSE
+	make.seed.button <- FALSE
+	
+	###########
+	## TAB 1 ##
+	###########
+	Tab <- 1
+	
+	### 1. ADDING THE FRAMES ###
+	
+	#### ENTRY FIELDS FRAME ####
+	
+	type <- "entryfields"
+	
+	# Change variables accordingly:
+	frame.name <- "entryframe1"  
+	argument.names <- c("Values?") 
+	argument.types <- c("num") 
+	arguments <- c("arg1") 
+	initial.values <- c("")
+	title <- ""
+	border <- FALSE
+	entry.width <- c("25")
+	
+	# Do not change this line:
+	new.frames <- .add.frame(Tab=Tab,type=type
+			,frame.name=frame.name,argument.names=argument.names
+			,arguments=arguments,initial.values=initial.values
+			,title=title,border=border,entry.width=entry.width
+			,argument.types=argument.types  ,new.frames=new.frames)
+	
+
+	#### MANUAL BUTTONS FRAME ####
+	
+	type <- "buttons"
+	
+	# Change variables accordingly:
+	frame.name <- "buttonframe1"  
+	button.name <- "Choose"  
+	button.function <- "choose_WINDOW" 
+	button.data <- "" 
+	button.object <-  "saveobject" 
+	button.width <- "12"
+	button.data.transf <- "matrix" 
+	
+	arg.frames <- c()
+	
+	save <- FALSE
+	show.save <- FALSE
+	show <- FALSE
+	button.otherarg <- ""  # always start with a ,
+	
+	# Do not change this line: 
+	new.frames <- .add.frame(Tab=Tab,frame.name=frame.name,
+			type=type,button.name=button.name,button.width=button.width,
+			button.data.transf=button.data.transf,
+			button.function=button.function,button.data=button.data,
+			button.object=button.object,button.otherarg=button.otherarg,
+			arg.frames=arg.frames,save=save,show=show,show.save=show.save,
+			new.frames=new.frames)
+	
+	### 2. CONFIGURING THE GRID ###
+	grid.config <- .grid.matrix(Tab=Tab,c("entryframe1","buttonframe1"),
+    byrow=TRUE,nrow=1,ncol=2,grid.config=grid.config)
+		
+	### 3. COMBINING THE ROWS ###
+	
+	#########################################################################
+	## USE ALL THE ARGUMENTS ABOUT IN THE GENERAL GUI_TEMPLATE FUNCTION    ##
+	#########################################################################
+	GUI_template(dialogtitle=dialogtitle,helppage=helppage,make.resetgws.button=
+    make.resetgws.button,make.setwd.button=make.setwd.button,make.help.button=
+    make.help.button,make.seed.button=make.seed.button,usetabs=usetabs,tabnames=
+    tabnames,grid.config=grid.config,grid.rows=grid.rows,new.frames=new.frames)
+	
+}
+
+choose_WINDOW <- function(){
+	
+	##########################
+	## PREAMBLE/INFORMATION ##
+	##########################
+	
+	dialogtitle <- "Choosing"
+		
+	usetabs <- FALSE
+	
+	tabnames <- c("Biclustering","Plot & Diagnostics")
+	
+	if(usetabs){ntabs <- length(tabnames)} else {ntabs <- 1}
+	new.frames <- .initialize.new.frames(ntabs)
+	grid.config <- .initialize.grid.config(ntabs)
+	grid.rows <- .initialize.grid.rows(ntabs)
+		
+	helppage <- ""
+	
+	##################
+	## GRID BUTTONS ##
+	##################
+	
+	make.help.button <- FALSE
+	make.setwd.button <- FALSE
+	make.resetgws.button <- FALSE
+	make.seed.button <- FALSE
+	
+	###########
+	## TAB 1 ##
+	###########
+	Tab <- 1
+	
+	### 1. ADDING THE FRAMES ###
+		
+	#### LIST BOX FRAME ####
+	
+	type <- "listbox"
+	
+	# Change variables accordingly:
+	frame.name <- "listboxframe1"
+	arguments <- "values"		  # should only be 1
+	argument.names <- c("Value 1","Value 2","Value 3")
+	argument.values <- c("value1","value2","value3")
+	argument.types <- "char"   		  # should be only 1
+	initial.values <- c("value3")     # Can be 1 or multiple
+	length <- 4  #no character , if not given, will take length of names
+	select.multiple <- TRUE
+	title <- "Possible Values:"
+	border <- TRUE
+	
+	# DO NOT CHANGE THIS LINE:
+	new.frames <- .add.frame(Tab=Tab,type=type,
+			frame.name=frame.name,argument.names=argument.names,
+			arguments=arguments,argument.values=argument.values,
+			argument.types=argument.types, initial.values=initial.values,
+			length=length,select.multiple=select.multiple,
+			title=title,border=border,new.frames=new.frames)
+	
+	#### MANUAL BUTTONS FRAME ####
+	
+	type <- "buttons"
+	
+	# Change variables accordingly:
+	frame.name <- "buttonframe1"  
+	button.name <- "Ok"  
+	button.function <- "setentry_example" 
+	button.data <- "" 
+	button.object <-  "saveobject" 
+	button.width <- "12"
+	button.data.transf <- "matrix" 
+	
+	arg.frames <- c("listboxframe1")
+	
+	save <- FALSE
+	show.save <- FALSE
+	show <- FALSE
+	button.otherarg <- ""  # always start with a ,
+	
+	# Do not change this line: 
+	new.frames <- .add.frame(Tab=Tab,frame.name=frame.name,
+			type=type,button.name=button.name,button.width=button.width,
+			button.data.transf=button.data.transf,
+			button.function=button.function,button.data=button.data,
+			button.object=button.object,button.otherarg=button.otherarg,
+			arg.frames=arg.frames,save=save,show=show,show.save=show.save,
+			new.frames=new.frames)
+	
+	
+	### 2. CONFIGURING THE GRID ###
+	grid.config <- .grid.matrix(Tab=Tab,c("listboxframe1","buttonframe1"),
+    byrow=TRUE,nrow=2,ncol=1,grid.config=grid.config)
+	
+	
+	### 3. COMBINING THE ROWS ###
+	
+	#########################################################################
+	## USE ALL THE ARGUMENTS ABOUT IN THE GENERAL GUI_TEMPLATE FUNCTION    ##
+	#########################################################################
+	GUI_template(dialogtitle=dialogtitle,helppage=helppage,make.resetgws.button=
+    make.resetgws.button,make.setwd.button=make.setwd.button,make.help.button=
+    make.help.button,make.seed.button=make.seed.button,usetabs=usetabs,tabnames=
+    tabnames,grid.config=grid.config,grid.rows=grid.rows,new.frames=new.frames)
+		
+}
+
+setentry_example <- function(values){
+	
+	new.value <- "c("
+	for(i in 1:length(values)){
+		new.value <- paste0(new.value,"'",values[i],"'")
+		if(i!=length(values)){new.value <- paste0(new.value,",")}
+	}
+	new.value <- paste0(new.value,")")
+	
+	ChangeWindow("Example",tab=1,"entryframe1","arg1",new.value)
+	CancelWindow("Choosing")
+}
+
+
 \end{verbatim}
 
 \end{document}
