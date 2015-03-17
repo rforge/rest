@@ -13,7 +13,8 @@ No knowledge about Tcl/Tk is required to make use of these scripts.
 }
 
 \details{
-More detailed information about all the implementations and scripting of \code{REST} can be found in the vignette. (See the doc folder of package)
+More detailed information about all the implementations and scripting of \code{REST} can be found in the vignette. 
+This vignette is located in the \code{doc} folder of the package together with all the R scripts which are described in the vignette.
 }
 \author{Ewoud De Troyer \email{ewoud.detroyer@uhasselt.be}}
 \references{\code{RcmdrPlugin.BiclustGUI} package - \url{https://r-forge.r-project.org/R/?group_id=957} }

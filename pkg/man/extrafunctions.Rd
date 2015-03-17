@@ -32,7 +32,7 @@ GetWindowsENVIR()
 }
 
 
-\details{More information of the use of these functions can be found in the vignette.}
+\details{More information of the use of these functions can be found in the vignette located in the \code{doc} folder of the package.}
 
 
 \author{Ewoud De Troyer \email{ewoud.detroyer@uhasselt.be}}
