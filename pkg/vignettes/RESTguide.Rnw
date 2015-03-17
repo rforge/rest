@@ -1,4 +1,4 @@
-%\VignetteIndexEntry{BiclustGUI Full Guide} \\
+%\VignetteIndexEntry{REST Guide} \\
 %\VignetteEngine{knitr::knitr}
 
 \documentclass[a4paper]{article}
@@ -1025,7 +1025,7 @@ This function opens up a {\it Load} window (Figure \ref{loadGUI}) in which saved
 
 \newpage
 \bibliographystyle{asa}
-\bibliography{ThesisBiclustGUIbib}
+\bibliography{RESTbib}
 
 
 
