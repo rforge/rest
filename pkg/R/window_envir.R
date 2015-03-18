@@ -1,7 +1,3 @@
-# Project: GeneralGUI
-# 
-# Author: lucp8394
-###############################################################################
 
 
 ChangeWindow <- function(dialogtitle,tab=1,framename,argument,new.value){

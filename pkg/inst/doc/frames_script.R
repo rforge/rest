@@ -18,7 +18,7 @@ new.frames <- .add.frame(Tab=Tab,type=type
 		,arguments=arguments,initial.values=initial.values
 		,title=title,border=border,entry.width=entry.width
 		,argument.types=argument.types  ,new.frames=new.frames)
-
+### end of "Do not change these lines"
 
 
 
@@ -42,6 +42,7 @@ new.frames <- .add.frame(Tab=Tab,type=type
 		,arguments=arguments,argument.values=argument.values
 		,initial.values=initial.values,title=title,border=border
 		,new.frames=new.frames,argument.types=argument.types)	
+### end of "Do not change these lines"
 
 
 #### CHECK BOXES FRAME  ####
@@ -61,6 +62,7 @@ new.frames <- .add.frame(Tab=Tab,type=type
 		,frame.name=frame.name,argument.names=argument.names
 		,arguments=arguments,initial.values=initial.values
 		,title=title,border=border,new.frames=new.frames)
+### end of "Do not change these lines"
 
 
 #### VALUE SLIDER FRAME  ####
@@ -85,6 +87,7 @@ new.frames <- .add.frame(Tab=Tab,type=type,
 		argument.names=argument.names,arguments=arguments,
 		initial.values=initial.values,from=from,to=to,by=by,
 		length=length,new.frames=new.frames)
+### end of "Do not change these lines"
 
 
 #### SPIN BOX FRAME  ####
@@ -109,6 +112,7 @@ new.frames <- .add.frame(Tab=Tab,type=type,
 		arguments=arguments,initial.values=initial.values,
 		from=from,to=to,by=by,entry.width=entry.width,
 		title=title,border=border,new.frames=new.frames)
+### end of "Do not change these lines"
 
 
 #### LIST BOX FRAME ####
@@ -134,6 +138,7 @@ new.frames <- .add.frame(Tab=Tab,type=type,
 		argument.types=argument.types, initial.values=initial.values,
 		length=length,select.multiple=select.multiple,
 		title=title,border=border,new.frames=new.frames)
+### end of "Do not change these lines"
 
 #### MANUAL BUTTONS FRAME ####
 
@@ -163,5 +168,6 @@ new.frames <- .add.frame(Tab=Tab,frame.name=frame.name,
 		button.object=button.object,button.otherarg=button.otherarg,
 		arg.frames=arg.frames,save=save,show=show,show.save=show.save,
 		new.frames=new.frames)
+### end of "Do not change these lines"
 
 

@@ -1,15 +1,3 @@
-# Project: BiclustGUI
-# 
-# Author: Ewoud
-###############################################################################
-
-
-# Project: Master Thesis
-# 
-# Author: Ewoud
-###############################################################################
-
-
 
 
 GUI_template <- function(dialogtitle="",helppage="",usetabs=FALSE,tabnames=c(),make.resetgws.button=FALSE,make.setwd.button=FALSE,make.help.button=FALSE,make.seed.button=FALSE,grid.config=grid.config,grid.rows=grid.rows,new.frames){

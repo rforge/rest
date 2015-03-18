@@ -17,7 +17,7 @@ GUI_WINDOW <- function(list.info=list()){
 	new.frames <- .initialize.new.frames(ntabs)
 	grid.config <- .initialize.grid.config(ntabs)
 	grid.rows <- .initialize.grid.rows(ntabs)
-	###
+	### end of "Do not change these lines"
 	
 	##################
 	## GRID BUTTONS ##

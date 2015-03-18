@@ -37,19 +37,19 @@ R is a great platform for statisticians to do their analyses and data
 manipulation. Thanks to the existence of R packages, new code can be easily
 distributed and executed by other statisticians.\\
 However for other scientists, the barrier to understand the coding language of
-R, can sometimes be too difficult to breach. This is a shame since now all of
-the implemented methodology in R, is now inaccessible. One way to bridge this gap is
-through the use of {\it Graphical User Interfaces} (GUI). While the R-code is
+R, can sometimes be too difficult to breach. This is a shame since it means that
+all of the implemented methodology in R, is inaccessible for them. One way to
+bridge this gap is through the use of {\it Graphical User Interfaces} (GUI). While the R-code is
 still responsible for the analyses in the background, the user does not need to
 worry about it since the methods can be accessed through simple point and click.
 \\ \\
 However making a GUI can take up quite some time. Learning the syntax of
-creating windows, creating the actual code,... sometimes there is simply no time left to
-invest in this exercise. This is where the \texttt{REST} package (or
+creating windows, creating the actual code, etc. Sometimes there is simply no
+time left to invest in this exercise. This is where the \texttt{REST} package (or
 \texttt{{\bf R}cmdrPlugin {\bf E}asy {\bf S}cript {\bf T}emplates}) comes into
 play. \texttt{REST} contains an easy script template to create new dialogs in
 the form of a plug-in for R Commander (\texttt{Rcmdr}). These scripts do not
-require any knowledge about \texttt{tcltl} or \texttt{Rcmdr} and are very
+require any knowledge about \texttt{tcltk} or \texttt{Rcmdr} and are very
 straightforward to use. They will allow developers to translate the R-code from
 their packages into a GUI without too much difficulty.\\
 This means that the \texttt{REST} is not meant to be used independently. It
@@ -78,10 +78,10 @@ Since \verb|tcltk| is available on all the operating systems on which R is
 commonly run, the R Commander GUI will also run on all of these platforms.\\ \\
 The GUI is also very easy to start to use for beginners who do not have any
 or little experience with R. It will protect beginners from errors as the dialog
-boxes only have limited options related to the current context which minimizes
-the errors made by users. Further, since the users are exposed to the actual
-R commands through a script and output window, besides analyzing and managing
-the data in R easily, they can also learn how do it in R without a GUI.
+boxes only have limited options related to the current context. Further, since
+the users are exposed to the actual R commands through a script and output
+window,  \besides analyzing and managing the data in R easily, they can also
+learn how do it in R without a GUI.
 Another advantage is that the script will be generated on the fly as the user
 applies the desired statistics through the point-and-click GUI. This means it can be easily
 saved at the end of a session which enables the user afterwards to recreate the
@@ -106,7 +106,7 @@ More information on developing such a plug-in can be found in \citet{Fox2007}.\\
 \noindent R Commander is already a fully implemented GUI in which basic
 statistics can be executed. Creating a plug-in comes down to adding new menus and submenus at the
 top of the window which will lead to newly created dialogs.\\
-Each window you will create will simply be an R function. How to create these
+Each window you create will simply be an R function. How to create them
 with the template script will be explained in the next section, but first let's
 take a look at how you can add these extra menu's.
 
@@ -187,12 +187,12 @@ package (see Appendix).
 In order to use templates of the \verb|REST| package in your own package, you
 should import both \verb|Rcmdr| and \verb|REST| in the DESCRIPTION and
 NAMESPACE File.\\
-This comes down to adding \verb|Imports: Rcmdr, REST| to the first and
-\verb|import(Rcmdr,REST)| to the second.
+This comes down to adding \verb|Imports: Rcmdr, REST| to the former and
+\verb|import(Rcmdr,REST)| to the latter.
 
 \subsection{Active Data in \texttt{Rcmdr}}
-There are many ways to load in data in R Commander, from the R workspace, from a
-text file, excel file, SAS,... The important thing to know is that the loaded
+There are many ways to load data in R Commander, from the R workspace, from a
+text file, excel file, SAS, etc. The important thing to know is that the loaded
 data will become the active dataset in \texttt{Rcmdr}. This active dataset will
 always be of the dataframe class, so it could be possible you will need to
 transform it to a matrix if your function requires this.
@@ -219,13 +219,13 @@ transform it to a matrix if your function requires this.
 
 \subsection{General Script}
 We will now start going through \texttt{general\_script.R} which can be found in
-the appendix or de \verb|doc| folder of the \verb|REST| package.
+the appendix or the \verb|doc| folder of the \verb|REST| package.
 
 \subsubsection{General Window Information}
 \noindent The script starts by making a function which will be called on to
 create a window. First thing you should do of course is to rename this function
 to your own liking. Next, some objects (\verb|new.frames|, \verb|grid.config| and \verb|grid.rows|) are initialized that will be used to
-store information in about your window you are about to create. 
+store information about the window that you are about to create. 
 
 
 <<newwindow_script1,echo=TRUE,eval=FALSE>>=
@@ -317,9 +317,10 @@ call \verb|GRAPH_WINDOW(list(name="Method 1"))| from the button in the method 1
 window, the title will reflect this ("Graph of Method 1").\\
 This is of course a very simplistic example, but you can use this for all of the
 variables in the script, creating very different windows depending on which
-information is stored in \verb|list.info|. (e.g. different frames, different naming,...)
+information is stored in \verb|list.info| (e.g. different frames, different
+naming, etc.).
 
-\subsection{Making a Tab}
+\subsubsection{Making a Tab}
 After providing the information about the window we can finally start making
 it! You can make as many tabs as you want, but they are all created in the same
 three easy steps as shown in Figure \ref{3steps}:
@@ -394,8 +395,8 @@ exactly the same result.
 {\it Step 3:}\\
 The final step will enable you to put one or multiple rows in a seperate box
 which can serve two different purposes. The first, being the most obvious one, is
-simply to add some visual distinction between rows with the help of a title with
-or without a border around the row(s).\\
+simply to add some visual distinction between rows with the help of a title.
+This can be with or without a border around the row(s).\\
 The second purpose is connected to the way frames are added in this {\it grid}.
 Sometimes if frames have a large difference in size, other frames might seem to
 be jumping to the right, trying to fit in one general grid. In general if you
@@ -430,8 +431,10 @@ GUI_template(dialogtitle=dialogtitle,helppage=helppage,make.resetgws.button=
 @
 \noindent Next, you can repeat these 3 steps for as many tabs as you have
 defined in the beginning. Finally, to end the \verb|GUI_WINDOW| function, the
-\verb|GUI_template| function is called with all of your defined variables. This
-function will be responsible for actually creating your window.
+\verb|GUI_template| function is called with all of your defined variables. 
+This is our automated template function we created in the \verb|REST| package in
+order to complete the window creation. This means that this function will be responsible
+for actually creating your window.
 
 \subsection{Frame Scripts}
 In this section, the several types of frames which can be used in the
@@ -440,8 +443,8 @@ R-code (which are also in the Appendix) are copy-pasted into the
 \verb|general_script| and are adjusted as deemed necessary. \\
 All the frame types have the \verb|title| and
 \verb|border| option in common. The results of these options can be seen in
-figure \ref{titleborder}. Also note that for each frametype the information is saved in
-one object, namely \verb|new.frames|. Just as the grid and row configuration
+Figure \ref{titleborder}. Also note that for each frametype the information is
+saved in one object, namely \verb|new.frames|. Just as the grid and row configuration
 earlier, new information will keep on getting added to this object, now with
 the help of the \verb|.add.frame| function. Lastly, at the start of each frame
 script, a \verb|type| variable will be set to determine the type of frame for
@@ -449,9 +452,9 @@ this previous mentioned \verb|.add.frame| function.
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.5]{figures/title_border.png}
-\caption{{\bf a.}{\it Title \& No Border} {\bf b.}{\it Title \& Border} {\bf
-c.}{\it No Title \& Border}
+\includegraphics[scale=0.8]{figures/title_border.png}
+\caption{{\bf A.}{\it Title and No Border} {\bf B.}{\it Title and Border} {\bf
+C.}{\it No Title and Border}
 \label{titleborder}}
 \end{figure}
 
@@ -475,10 +478,11 @@ each other.
   appear in the window.
   \item[$\bullet$ \texttt{argument.types}:] A vector defining if the argument is
   \verb|"num"| or \verb|"char"|. This basically just means if there should be a
-  ' ' around the value when filling it in in the function. (e.g. In
+  \verb|' '| around the value when filling it in in the function. (e.g. In
   Figure \ref{entryfields} the arguments would be filled in as \verb|,arg1=1,arg2=2,arg3='a'|)
   \item[$\bullet$ \texttt{arguments}:] The actual argument names, used for the
-  function.
+  function. Note it is not necessary for these to be unique between multiple
+  frames.
   \item[$\bullet$ \texttt{initial.values}:] A vector containing the initial
   values in the entry fields.
   \item[$\bullet$ \texttt{title}:] Optional title for the frame (\verb|""| means no title)
@@ -506,7 +510,8 @@ boxes can be added below each other.
   \item[$\bullet$ \texttt{argument.names}:] The argument names how they will
   appear in the window.
   \item[$\bullet$ \texttt{arguments}:] The actual argument names, used for the
-  function.
+  function. Note it is not necessary for these to be unique between multiple
+  frames.
   \item[$\bullet$ \texttt{initial.values}:] A vector containing the initial
   values in the entry fields. (0 for \verb|FALSE|, 1 for \verb|TRUE|)
   \item[$\bullet$ \texttt{title}:] Optional title for the frame (\verb|""| means no title)
@@ -531,10 +536,11 @@ finite number of values.
   \item[$\bullet$ \texttt{argument.names}:] The names of the buttons how they
   will appear in the window.
   \item[$\bullet$ \texttt{arguments}:] The actual argument name, used for the
-  function. (Only 1 argument!)
+  function. Note it is not necessary for these to be unique between multiple
+  frames. (Only 1 argument!)
   \item[$\bullet$ \texttt{argument.types}:] Just as for the entry fields, this
-  will determine of the values are filled in with or without ''. The two options
-  are again \verb|"num"| and \verb|"char"|, but in contrast with the entry
+  will determine of the values are filled in with or without \verb|' '|. The two
+  options are again \verb|"num"| and \verb|"char"|, but in contrast with the entry
   fields it is now only one value and not a vector.
   \item[$\bullet$ \texttt{argument.values}:] The actual values of the radio buttons 
 that correspond to the values passed to the function. 
@@ -564,10 +570,17 @@ current value of the slider will always appear on top of it.
   \item[$\bullet$ \texttt{argument.names}:] The argument names how they will
   appear in the window.  
   \item[$\bullet$ \texttt{arguments}:] The actual argument names, used for the
-  function.
+  function. Note it is not necessary for these to be unique between multiple
+  frames.
   \item[$\bullet$ \texttt{initial.values}:] Vector of initial values of the
-  sliders.
-  \item[$\bullet$ \texttt{from}:] Vector of starting points of the sliders.
+  sliders. Depending on the possible values the slider can take, this value will
+  shift towards it (e.g. Slider 3: 10 as initial value but it was shifted to 0
+  since this is the closest value the slider represent).
+  \item[$\bullet$ \texttt{from}:] Vector of starting points of the slider
+  (note: depending on the \verb|length|, \verb|to| and \verb|by| parameter, this
+  `from' value could change slightly. It will choose the closest and most
+  fitting value to display the slider properly. e.g. Slider 3 starts from 0
+  instead of 1).
   \item[$\bullet$ \texttt{to}:] Vector of ending points of the sliders.
   \item[$\bullet$ \texttt{by}:] Vector with the values determining how one
   movement of the sliders will change the current value.
@@ -597,7 +610,8 @@ values. Just as for sliders, multiple spin boxes can be placed below each other.
   \item[$\bullet$ \texttt{argument.names}:] The argument names how they will
   appear in the window.  
   \item[$\bullet$ \texttt{arguments}:] The actual argument names, used for the
-  function.
+  function. Note it is not necessary for these to be unique between multiple
+  frames.
   \item[$\bullet$ \texttt{initial.values}:] Vector of initial values of the
   spin boxes.
   \item[$\bullet$ \texttt{from}:] Vector of starting points of the spin boxes.
@@ -627,19 +641,21 @@ one or multiple from the box, putting them in a vector.
 \begin{description}
   \item[$\bullet$ \texttt{frame.name}:] The unique name of this frame. (Which is used in the grid matrix)
   \item[$\bullet$ \texttt{arguments}:] The actual argument name, used for the
-  function. (Only 1 argument!)
+  function. Note it is not necessary for these to be unique between multiple
+  frames. (Only 1 argument!)
   \item[$\bullet$ \texttt{argument.names}:] The labels of the items how they
   will appear in the box.
   \item[$\bullet$ \texttt{argument.values}:] The actual values of the list items 
   that correspond to the values passed to the function. 
   \item[$\bullet$ \texttt{argument.types}:] Just as for the entry fields, this
-  will determine of the values are filled in with or without ''. The two options
+  will determine of the values are filled in with or without \verb|' '|. The two options
   are again \verb|"num"| and \verb|"char"|, but in contrast with the entry
   fields it is now only one value and not a vector. (Same as for radio buttons)
   \item[$\bullet$ \texttt{initial.values}:] The initial value of the list box.
   It will determine which list item is selected on opening the window.
   \item[$\bullet$ \texttt{length}:] A value corresponding with the height of the
-  box. (If no value, \verb|c()|, is given, the length of the \verb|argument.names| will be used)
+  box. (If no value or \verb|c()| is given, the length of the
+  \verb|argument.names| will be used)
   \item[$\bullet$ \texttt{select.multiple}:] A logical value determining if it
   should be possible selecting only 1 or multiple list items. For example if the
   \verb|argument.types| would be \verb|"char"| and \verb|select.multiple| would
@@ -671,8 +687,8 @@ application is to tie the button to another window function to open up more opti
   \item[$\bullet$ \texttt{frame.name}:] The unique name of this frame. (Which is used in the grid matrix)
   \item[$\bullet$ \texttt{button.name}:] The text which will appear on the
   button. 
-  \item[$\bullet$ \texttt{button.function}:] A string of the function which
-  should be tied to this button. Another useful practice is to actually make an entire
+  \item[$\bullet$ \texttt{button.function}:] A string of the name of the
+  function which should be tied to this button. Another useful practice is to actually make an entire
   new function for this manual button. This new function could then for
   example contain a series of functions which would then be carried
   out all at the same time when clicking on this button.
@@ -723,9 +739,9 @@ application is to tie the button to another window function to open up more opti
 \end{figure}
 
 \subsection{Example Script - Plaid Biclustering}
-In this small section, we will highlights some parts of make an example window.
-The example which was chosen was to implement a biclustering method, namely the
-{\it Plaid} method. (The full code can be found in the Appendix)
+In this small section, we will demonstrate some parts of window creation in an
+example. The example which was chosen was to implement a biclustering method,
+namely the {\it Plaid} method. (The full code can be found in the Appendix)
 
 
 <<example_script1,echo=TRUE,eval=FALSE>>=
@@ -759,12 +775,22 @@ plaid_WINDOW <- function(list.info=list()){
 	#... followed by tabs, frames,...
 }
 @
-\noindent First of all the general information is filled in in the script above.
-This dialog contains 2 tabs with a help and seed grid button. 
-(The code for the second tab has been omitted in the Appendix)\\
+\noindent First of all the general information is filled out in the script
+above.
+This dialog contains two tabs with a help and seed grid button. 
+The code for the second tab has been omitted in the Appendix.\\
 Next in Figure \ref{plaidbuilding}, some of the frames are highlighted with
 their corresponding code. Note also the use of the buttons and how frames are
-chosen to give the arguments to the function tied to the button (red arrows).
+chosen to give the arguments to the function tied to the button (red arrows).\\
+The function used to execute the plaid algorithm is called \verb|biclust| with
+the argument \verb|method=BCPlaid()|. The latter you can see coming back in the
+\verb|button.otherarg|. This means the end result would look something like
+\begin{verbatim}
+PlaidResult <- biclust(x=data,method=BCPlaid(),background=TRUE,
+                                shuffle=3,back.fit=0,max.layers=20,...)
+\end{verbatim}
+with of course the extra addition of the other parameters of other frames (the
+frames defined in \verb|arg.frames|).
 
 \begin{figure}[H]
 \centering
@@ -774,8 +800,8 @@ chosen to give the arguments to the function tied to the button (red arrows).
 \noindent Following the rest of the frame creations is of course the grid
 configuring and the row combining of the first tab. In this extract of the
 script, one can see the frames from Figure \ref{plaidbuilding} being
-placed in the last 3 of the 4 rows of the matrix after which the 2nd and 3rd row
-are made into a box with border and {\it Layer Specifications} title.
+placed in the last three of the four rows of the matrix after which the second
+and third row are made into a box with border and {\it Layer Specifications} title.
 
 <<example_script2,echo=TRUE,eval=FALSE>>=
 ### 2. CONFIGURING THE GRID ###
@@ -806,9 +832,15 @@ GUI_template(dialogtitle=dialogtitle,helppage=helppage,make.resetgws.button=
 \noindent Finally, the \verb|GUI_template| function is used to combine all the
 gathered information and create the actual window.
 \subsection{Testing your windows}
-To test your created window function, simply load in the \texttt{REST} package
-which will launch the basic R Commander interface. Now run the new window
-function and it will appear on of the R Commander interface.
+To test your created window function, first load in the \texttt{REST} package
+which will launch the basic R Commander interface. Now open up an empty script
+and paste your window script there. Going back to the example in the previous
+section, this would simply mean pasting the entire \verb|plaid_WINDOW| function
+here. Now run this function in R and your new window will appear on top
+of the R Commander Interface.\\
+If necessary, load in some data first before you start testing out the buttons
+and checking if the right functions are appearing in the R Commander window.
+
 
 \subsection{Advanced Techniques}
 \subsubsection{Using \texttt{doItAndPrint()} and \texttt{justDoIt()}}
@@ -822,7 +854,7 @@ In this case, nothing is shown and nothing is saved when you click the button.
 The function tied to the button is simply being executed. What will be shown now
 is how to let several functions appear in the R-Commander screen instead of only
 one.\\
-This is done through the help of the following 2 \verb|Rcmdr| functions. In
+This is done through the help of the following two \verb|Rcmdr| functions. In
 these functions the \verb|command| argument is simply an R-expression in
 character format. (e.g. \verb|"a <- 10+9"| or \verb|"b <- mean(c(1,2,3,4))"| or \verb|"a+b"|)
 \begin{description}
@@ -870,39 +902,39 @@ CenterColumns <- function(type=c("mean","median")){
 Figure \ref{doitandprint_example}, accompanied by the plot in a graphics device.
 \begin{figure}[H]
 \centering
-\includegraphics[width=10cm]{figures/doitandprint_example.png}
+\includegraphics[width=12cm]{figures/doitandprint_example.png}
 \caption{Example - CenterColumns \label{doitandprint_example}}
 \end{figure}
 
 
 \subsubsection{Window Environments}
-\noindent When an window is being created, all the variables (such as
+\noindent When a window is being created, all the variables (such as
 \verb|new.frames|) are being saved in a certain environment. You could see this
 as a box in which all the parameters and variables connected with this window
 reside. By using the \verb|GetWindowsENVIR()| function, you will get back a
-\verb|list| object of which each element corresponds with a window which has
+\verb|list| object of which each element corresponds to a window which has
 been used. The name of such a list element is the \verb|dialogtitle| and the
 element itself is the created environment. Also remember that each time you
 reopen a window, the environment will change to a new one and if you call the
 \verb|list| object again, this change will be visible here too.\\
 Now you might wonder why knowing this environment could be useful. By having
-access to these variables of another window, you can change these at all times,
+access to these variables of another window, you can change these at any time,
 giving your GUI even more flexibility.\\
 An easy example could be that you have a button called {\it `Presets'} on your
 main window. Pressing this button would then open up a new window in which the
 user can select with a radio button which one of the presets it would like
 (Preset 1, Preset 2,...). In this new window the user could then click on an
 {\it OK} button. The function tied to this button would then, with the above
-described process, change all the inputs in the main window before closing down
+described process, change all the inputs in the main window (to this preset) before closing down
 the second window.
 \\
 While this can be done manually, to facilitate this process, some functions were
 created for the most used application, namely changing what the user can enter
-in the GUI. (An example will be given too for more clarification)
+in the GUI. Also an example will be given for clarification.
 \\ \\
 {\bf \underline{Functions}}
 \\ \\
-\noindent \verb|ChangeWindow(dialogtitle,tab=1,framename,argument,new.value)|
+\noindent \verb|ChangeWindow(dialogtitle, tab=1, framename, argument, new.value)|
 \\ \\
 \noindent {\it Description:}\\
 \noindent This function will change the value the user can choose/enter in the
@@ -913,11 +945,11 @@ frames. The behaviour is a bit different for the types of frames. See
   be altered. This should be the same as \verb|dialogtitle| in your window
   script.
   \item[$\bullet$ \texttt{tab}:] The number of the tab in which you want
-  something changed. (If no tabs are used, choose number 1)
+  something changed (if no tabs are used, choose number 1).
   \item[$\bullet$ \texttt{framename}:] The name of the frame in which something
-  is going to be changed. (Same name as in the window script)
+  is going to be changed (same name as in the window script).
   \item[$\bullet$ \texttt{argument}:] The name of the argument in which
-  something should be changed. (Same as in the window script)
+  something should be changed (same as in the window script).
   \item[$\bullet$ \texttt{new.value}:] The new value which should be entered for
   this argument in this particular frame. \verb|new.value| should almost always
   be a character (string), unless you are using it to change something in a list
@@ -932,12 +964,12 @@ frames. The behaviour is a bit different for the types of frames. See
     \item[$\triangleright$ {\it Radio Buttons:}] \verb|new.values| should be
     that one of the \verb|argument.values| you wish to be selected
     \item[$\triangleright$ {\it Value Sliders:}] \verb|new.values| should be a
-    character containing the numerical value you want the slider to be on. (e.g.
-    \verb|"10"|) Note that this value will be rounded to one of the possible
-    positions of the slider.
+    character containing the numerical value you want the slider to be on (e.g.
+    \verb|"10"|). Note that this value will be rounded to the closest possible
+    position on the slider.
     \item[$\triangleright$ {\it Spin Boxes:}] \verb|new.values| should be a
-    character containing the numerical value you want to spinbox to have. (e.g.
-    \verb|"5"|) Note that this value will be rounded to one of the possible
+    character containing the numerical value you want to spinbox to have (e.g.
+    \verb|"5"|). Note that this value will be rounded to one of the possible
     values the spin box can take.
     \item[$\triangleright$ {\it List Box:}] Instead of simply changing which
     items are selected in the box, \verb|new.values| will instead change the
@@ -962,17 +994,17 @@ This function will close down the chosen window.
 has initially an empty entry field after `Values?'. Clicking the {\it Choose}
 button opens up a new window called {\it `Choosing'}. In this new window the
 user can select one or multiple values in a list box and after pressing {\it
-Ok}, they will appear in vector format in the earlier mentioned empty entry
+OK}, they will appear in vector format in the earlier mentioned empty entry
 field before the new {\it Choosing} window closes down.\\
 The code for the relevant frames is given in Figure \ref{windowenvir_example}
-together with the function tied to the {\it Ok} button. Note that to save some
+together with the function tied to the {\it OK} button. Note that to save some
 space, the \verb|.add.frame| line was omitted in these frame scripts.
 \\ \\
 First, you can already see that the function tied to the {\it Choose} button is
 simply the \verb|choose_WINDOW| function without any arguments (\verb|arg.frames <- c()|). 
-The function tied to the {\it Ok} button, \verb|setentry_example|, has 1
+The function tied to the {\it OK} button, \verb|setentry_example|, has 1
 argument (\verb|values|) which comes from \verb|"listboxframe1"|. This is again
-defined by the \verb|arg.frames| for the {\it Ok} button. \\
+defined by the \verb|arg.frames| for the {\it OK} button. \\
 The first thing \verb|setentry_example| does is converting \verb|values| to a
 character format in \verb|new.value|. For example in this example
 \verb|c("value1","value3")| becomes \verb|"c('value1','value3')"|. Next, this
@@ -988,11 +1020,7 @@ Lastly the {\it `Choosing'} window is closed down by using the
 \includegraphics[width=\linewidth]{figures/windowenvir_example.png}
 \caption{Window Environments - Example (Code + Window)\label{windowenvir_example}}
 \end{figure}
-% Also explain rewritten when reopened. + stays if not open + explain use of window from window
-%ChangeWindow
-%CancelWindow
-%GetWindowsENVIR
-% ADD EXAMPLE
+
 
 \newpage
 
@@ -1001,7 +1029,7 @@ Lastly the {\it `Choosing'} window is closed down by using the
 to be linked to a button or to be used inside functions described in Section
 \ref{sec:doitandprint}.
 \subsubsection{Save Function}
-\texttt{SaveGUI(object.names,init.name="result")}\\ \\
+\texttt{SaveGUI(object.names, init.name="result")}\\ \\
 This function will open up a {\it Save} window (Figure \ref{saveGUI}), saving
 the chosen \verb|object.names| (vector of the names of the objects to be saved)
 in an \verb|.RData| file. The \verb|init.name| variable simply decide the
@@ -1098,13 +1126,13 @@ GUI_WINDOW <- function(list.info=list()){
 	
 
     ### 2. CONFIGURING THE GRID ###
-    grid.config <- .grid.matrix(Tab=Tab,c("frame1","frame2","frame3",NA),
-      byrow=TRUE,nrow=2,ncol=2,grid.config=grid.config)
+    grid.config <- .grid.matrix(Tab = Tab, c("frame1","frame2","frame3",NA),
+      byrow=TRUE, nrow=2, ncol=2, grid.config=grid.config)
 
 
     ### 3. COMBINING THE ROWS ###
-    grid.rows <- .combine.rows(Tab=Tab,rows=c(1,2),title="A nice box: ",
-      border=TRUE,grid.rows=grid.rows,grid.config=grid.config)
+    grid.rows <- .combine.rows(Tab = Tab, rows = c(1,2),title = "A nice box: ",
+      border = TRUE, grid.rows=grid.rows, grid.config = grid.config)
 	
     #############
     ### TAB 2 ###
@@ -1117,11 +1145,11 @@ GUI_WINDOW <- function(list.info=list()){
     #########################################################################
     ## USE ALL THE ARGUMENTS ABOUT IN THE GENERAL GUI_TEMPLATE FUNCTION    ##
     #########################################################################
-    GUI_template(dialogtitle=dialogtitle,helppage=helppage,make.resetgws.button=
-        make.resetgws.button,make.setwd.button=make.setwd.button,
-        make.help.button=make.help.button,make.seed.button=make.seed.button,
-        usetabs=usetabs,tabnames=tabnames,grid.config=grid.config,grid.rows=
-        grid.rows,new.frames=new.frames)
+    GUI_template(dialogtitle = dialogtitle, helppage = helppage, make.resetgws.button =
+        make.resetgws.button, make.setwd.button = make.setwd.button,
+        make.help.button = make.help.button, make.seed.button = make.seed.button,
+        usetabs = usetabs, tabnames = tabnames, grid.config = grid.config, grid.rows =
+        grid.rows, new.frames = new.frames)
 	
 }
 \end{verbatim}

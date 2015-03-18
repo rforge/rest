@@ -1,7 +1,3 @@
-# Project: Master Thesis
-# 
-# Author: Ewoud
-###############################################################################
 
 
 .add.frame <- function(Tab,type,frame.name,argument.names="",arguments="",initial.values=c(),title="",border=FALSE,entry.width="2",argument.values=c(),argument.types=c(),from=c(),to=c(),by=c(),length=c(),select.multiple=FALSE,button.name="",button.function="",button.data="",arg.frames=c(),button.otherarg="",button.object="",button.width="12",button.data.transf="matrix",save=TRUE,show.save=TRUE,show=TRUE ,new.frames=new.frames){

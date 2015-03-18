@@ -8,16 +8,16 @@
 \BOOKMARK [1][-]{section.4}{Script Templates Guide}{}% 8
 \BOOKMARK [2][-]{subsection.4.1}{General Script}{section.4}% 9
 \BOOKMARK [3][-]{subsubsection.4.1.1}{General Window Information}{subsection.4.1}% 10
-\BOOKMARK [2][-]{subsection.4.2}{Making a Tab}{section.4}% 11
-\BOOKMARK [2][-]{subsection.4.3}{Frame Scripts}{section.4}% 12
-\BOOKMARK [2][-]{subsection.4.4}{Example Script - Plaid Biclustering}{section.4}% 13
-\BOOKMARK [2][-]{subsection.4.5}{Testing your windows}{section.4}% 14
-\BOOKMARK [2][-]{subsection.4.6}{Advanced Techniques}{section.4}% 15
-\BOOKMARK [3][-]{subsubsection.4.6.1}{Using doItAndPrint\(\) and justDoIt\(\)}{subsection.4.6}% 16
-\BOOKMARK [3][-]{subsubsection.4.6.2}{Window Environments}{subsection.4.6}% 17
-\BOOKMARK [2][-]{subsection.4.7}{Extra Functions}{section.4}% 18
-\BOOKMARK [3][-]{subsubsection.4.7.1}{Save Function}{subsection.4.7}% 19
-\BOOKMARK [3][-]{subsubsection.4.7.2}{Load Function}{subsection.4.7}% 20
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Making a Tab}{subsection.4.1}% 11
+\BOOKMARK [2][-]{subsection.4.2}{Frame Scripts}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.3}{Example Script - Plaid Biclustering}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.4}{Testing your windows}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.5}{Advanced Techniques}{section.4}% 15
+\BOOKMARK [3][-]{subsubsection.4.5.1}{Using doItAndPrint\(\) and justDoIt\(\)}{subsection.4.5}% 16
+\BOOKMARK [3][-]{subsubsection.4.5.2}{Window Environments}{subsection.4.5}% 17
+\BOOKMARK [2][-]{subsection.4.6}{Extra Functions}{section.4}% 18
+\BOOKMARK [3][-]{subsubsection.4.6.1}{Save Function}{subsection.4.6}% 19
+\BOOKMARK [3][-]{subsubsection.4.6.2}{Load Function}{subsection.4.6}% 20
 \BOOKMARK [1][-]{section.5}{Appendix}{}% 21
 \BOOKMARK [2][-]{subsection.5.1}{.onAttach-function}{section.5}% 22
 \BOOKMARK [2][-]{subsection.5.2}{General Script}{section.5}% 23
