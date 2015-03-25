@@ -66,7 +66,6 @@ It should be mentioned that the scripts used in this package are a
 generalisation of the templates scripts which were used in the
 \texttt{RcmdrPlugin.BiclustGUI} package.
 
-
 \section{R Commander}
 
 R Commander, \verb|Rcmdr|\citep{Fox2005}, is a GUI developed by John Fox from
@@ -101,6 +100,29 @@ More information on developing such a plug-in can be found in \citet{Fox2007}.\\
 \caption{{\it Default R Commander}\label{rcmdrwindow}}
 \end{figure}
 
+
+\section{Other GUI Creation Packages}
+There exist several packages in R to help users create GUI's. Some examples are
+\verb|Rgtk2| \citep{Lawrence2014} and \verb|gWidgets| \citep{Verzani2014}.
+Especially the latter already operates at a fairly high level to help users
+create quick and interactive GUI's without too much fuss. The \verb|REST|
+package differs in that it works on an even higher level by using a
+``fill-out'' script. This reduces the learning curve even more. The
+price to pay however is that it is less flexible than than a package like
+\verb|gWidgets|.\\
+Another difference lies in the fact that \verb|REST| is completely tied to
+\verb|Rcmdr|, providing all the benefits R Commanders brings in. This includes
+things like the fully functional system to load in data from several sources,
+the implemented basic statistics and of course the existence of the script
+window. The latter might be especially helpfull if you already have an existing
+package you want to translate into a GUI as it provides a nice teaching tool to
+learn to use your original package.\\
+So while you lose power in creating your GUI, a lot of the basic things you
+need to implement when making a GUI are already there, gaining you time instead.
+\\ \\
+At the end of the day, it will always be the developer who needs to decide 
+which of these packages, fits him/her the most. It will always depend on how much time
+is availabe and what the end goal is precisely.
 
 \section{Creating a GUI for \texttt{Rcmdr}}
 \noindent R Commander is already a fully implemented GUI in which basic
@@ -1052,6 +1074,7 @@ This function opens up a {\it Load} window (Figure \ref{loadGUI}) in which saved
 \end{figure}
 
 \newpage
+\nocite{*}
 \bibliographystyle{asa}
 \bibliography{RESTbib}
 

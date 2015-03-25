@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.20)  19 MAR 2015 13:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.20)  25 MAR 2015 17:17
 entering extended mode
 **C:/Users/lucp8394/Documents/StatFiles/CenStat/R*Development/GeneralGUI_Templa
 te/REST/vignettes/RESTguide.tex
@@ -385,7 +385,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ("C:\Users\lucp8394\Documents\StatFiles\CenStat\R Development\GeneralGUI_Templa
 te\REST\vignettes\RESTguide.toc"
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 4.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 5.
 )
 \tf@toc=\write4
 [1
@@ -406,64 +406,66 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--117
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--146
+Underfull \hbox (badness 10000) in paragraph at lines 120--145
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--146
+Underfull \hbox (badness 10000) in paragraph at lines 120--145
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--146
+Underfull \hbox (badness 10000) in paragraph at lines 120--145
 
  []
 
-<figures/rcmdrwindow.png, id=151, 702.625pt x 844.15375pt>
+<figures/rcmdrwindow.png, id=156, 702.625pt x 844.15375pt>
 File: figures/rcmdrwindow.png Graphic file (type png)
 <use figures/rcmdrwindow.png>
-Package pdftex.def Info: figures/rcmdrwindow.png used on input line 149.
+Package pdftex.def Info: figures/rcmdrwindow.png used on input line 148.
 (pdftex.def)             Requested size: 284.52756pt x 341.84175pt.
 [2]
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 154.
+Underfull \hbox (badness 10000) in paragraph at lines 154--175
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--200
+ []
+
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 176.
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--222
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--200
+Underfull \hbox (badness 10000) in paragraph at lines 185--222
 
  []
 
 [3 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Temp
-late/REST/vignettes/figures/rcmdrwindow.png>] <figures/examplemenus.png, id=173
+late/REST/vignettes/figures/rcmdrwindow.png>] <figures/examplemenus.png, id=183
 , 699.61375pt x 156.585pt>
 File: figures/examplemenus.png Graphic file (type png)
 <use figures/examplemenus.png>
-Package pdftex.def Info: figures/examplemenus.png used on input line 225.
+Package pdftex.def Info: figures/examplemenus.png used on input line 247.
 (pdftex.def)             Requested size: 341.43306pt x 76.4191pt.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 230.
-<figures/rcmdr_datainput.png, id=174, 699.61375pt x 250.9375pt>
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 252.
+[4 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Temp
+late/REST/vignettes/figures/examplemenus.png>] <figures/rcmdr_datainput.png, id
+=191, 699.61375pt x 250.9375pt>
 File: figures/rcmdr_datainput.png Graphic file (type png)
 <use figures/rcmdr_datainput.png>
-Package pdftex.def Info: figures/rcmdr_datainput.png used on input line 251.
+Package pdftex.def Info: figures/rcmdr_datainput.png used on input line 273.
 (pdftex.def)             Requested size: 256.0748pt x 91.84987pt.
-<figures/rcmdr_activedataset.png, id=175, 461.725pt x 278.03876pt>
+<figures/rcmdr_activedataset.png, id=192, 461.725pt x 278.03876pt>
 File: figures/rcmdr_activedataset.png Graphic file (type png)
 <use figures/rcmdr_activedataset.png>
-Package pdftex.def Info: figures/rcmdr_activedataset.png used on input line 256
+Package pdftex.def Info: figures/rcmdr_activedataset.png used on input line 278
 .
 (pdftex.def)             Requested size: 256.0748pt x 154.20302pt.
-[4 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Temp
-late/REST/vignettes/figures/examplemenus.png> <C:/Users/lucp8394/Documents/Stat
-Files/CenStat/R Development/GeneralGUI_Template/REST/vignettes/figures/rcmdr_da
-tainput.png>]
-Package color Info: Redefining color shadecolor on input line 281.
-LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 283
+Package color Info: Redefining color shadecolor on input line 303.
+LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 305
 .
 
 ("C:/Program Files/Architect/plugins/eu.openanalytics.architect.r.server.win32.
@@ -471,221 +473,222 @@ win32_0.9.4.201408202157/R/share/texmf/tex/latex\omscmtt.fd"
 File: omscmtt.fd 
 )
 LaTeX Font Info:    Font shape `OMS/cmtt/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 283.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 305.
 [5 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Temp
-late/REST/vignettes/figures/rcmdr_activedataset.png>] <figures/optionalgrid.png
-, id=196, 449.68pt x 209.78375pt>
+late/REST/vignettes/figures/rcmdr_datainput.png> <C:/Users/lucp8394/Documents/S
+tatFiles/CenStat/R Development/GeneralGUI_Template/REST/vignettes/figures/rcmdr
+_activedataset.png>] <figures/optionalgrid.png, id=205, 449.68pt x 209.78375pt>
 File: figures/optionalgrid.png Graphic file (type png)
 <use figures/optionalgrid.png>
-Package pdftex.def Info: figures/optionalgrid.png used on input line 350.
+Package pdftex.def Info: figures/optionalgrid.png used on input line 372.
 (pdftex.def)             Requested size: 256.0748pt x 119.46913pt.
-[6 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Temp
-late/REST/vignettes/figures/optionalgrid.png>] <figures/3steps.png, id=204, 910
-.40125pt x 561.09625pt>
+[6] <figures/3steps.png, id=214, 910.40125pt x 561.09625pt>
 File: figures/3steps.png Graphic file (type png)
 <use figures/3steps.png>
-Package pdftex.def Info: figures/3steps.png used on input line 388.
+Package pdftex.def Info: figures/3steps.png used on input line 410.
 (pdftex.def)             Requested size: 483.69687pt x 298.11589pt.
-Package color Info: Redefining color shadecolor on input line 394.
+[7 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Temp
+late/REST/vignettes/figures/optionalgrid.png>]
+Package color Info: Redefining color shadecolor on input line 416.
 
-Underfull \hbox (badness 10000) in paragraph at lines 417--426
+Underfull \hbox (badness 10000) in paragraph at lines 439--448
 
  []
 
-[7 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Temp
-late/REST/vignettes/figures/3steps.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 427.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 449.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 427.
-Package color Info: Redefining color shadecolor on input line 470.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 449.
+[8 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Temp
+late/REST/vignettes/figures/3steps.png>]
+Package color Info: Redefining color shadecolor on input line 492.
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--470
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 433--470
+Underfull \hbox (badness 10000) in paragraph at lines 455--492
 
  []
 
 
-Overfull \hbox (9.79883pt too wide) in paragraph at lines 486--486
+Underfull \hbox (badness 10000) in paragraph at lines 455--492
+
+ []
+
+
+Overfull \hbox (9.79883pt too wide) in paragraph at lines 508--508
 []                []\OT1/cmtt/m/n/10 usetabs[][]=usetabs,[][]tabnames[][]=tabna
 mes,[][]grid.config[][]=grid.config,[][]grid.rows[][]=grid.rows,[][] 
  []
 
-[8] <figures/title_border.png, id=220, 451.6875pt x 180.675pt>
+<figures/title_border.png, id=231, 451.6875pt x 180.675pt>
 File: figures/title_border.png Graphic file (type png)
 <use figures/title_border.png>
-Package pdftex.def Info: figures/title_border.png used on input line 514.
+Package pdftex.def Info: figures/title_border.png used on input line 536.
 (pdftex.def)             Requested size: 361.35048pt x 144.54018pt.
-<figures/entryfields.png, id=221, 751.80875pt x 384.43625pt>
+[9] <figures/entryfields.png, id=237, 751.80875pt x 384.43625pt>
 File: figures/entryfields.png Graphic file (type png)
 <use figures/entryfields.png>
-Package pdftex.def Info: figures/entryfields.png used on input line 528.
+Package pdftex.def Info: figures/entryfields.png used on input line 550.
 (pdftex.def)             Requested size: 375.90344pt x 192.21765pt.
-[9 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Temp
-late/REST/vignettes/figures/title_border.png> <C:/Users/lucp8394/Documents/Stat
-Files/CenStat/R Development/GeneralGUI_Template/REST/vignettes/figures/entryfie
-lds.png>] <figures/checkboxes.png, id=231, 678.535pt x 344.28625pt>
+<figures/checkboxes.png, id=239, 678.535pt x 344.28625pt>
 File: figures/checkboxes.png Graphic file (type png)
 <use figures/checkboxes.png>
-Package pdftex.def Info: figures/checkboxes.png used on input line 561.
+Package pdftex.def Info: figures/checkboxes.png used on input line 583.
 (pdftex.def)             Requested size: 339.26666pt x 172.1427pt.
-<figures/radiobuttons.png, id=232, 729.72626pt x 405.515pt>
+[10 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Tem
+plate/REST/vignettes/figures/title_border.png> <C:/Users/lucp8394/Documents/Sta
+tFiles/CenStat/R Development/GeneralGUI_Template/REST/vignettes/figures/entryfi
+elds.png>] <figures/radiobuttons.png, id=247, 729.72626pt x 405.515pt>
 File: figures/radiobuttons.png Graphic file (type png)
 <use figures/radiobuttons.png>
-Package pdftex.def Info: figures/radiobuttons.png used on input line 587.
+Package pdftex.def Info: figures/radiobuttons.png used on input line 609.
 (pdftex.def)             Requested size: 364.86224pt x 202.75699pt.
-[10 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Tem
+[11 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Tem
 plate/REST/vignettes/figures/checkboxes.png> <C:/Users/lucp8394/Documents/StatF
 iles/CenStat/R Development/GeneralGUI_Template/REST/vignettes/figures/radiobutt
-ons.png>] <figures/slider.png, id=241, 819.06pt x 412.54124pt>
+ons.png>] <figures/slider.png, id=256, 819.06pt x 412.54124pt>
 File: figures/slider.png Graphic file (type png)
 <use figures/slider.png>
-Package pdftex.def Info: figures/slider.png used on input line 621.
+Package pdftex.def Info: figures/slider.png used on input line 643.
 (pdftex.def)             Requested size: 409.52899pt x 206.27011pt.
-[11 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Tem
-plate/REST/vignettes/figures/slider.png>] <figures/spinboxes.png, id=248, 715.6
-7375pt x 413.545pt>
+<figures/spinboxes.png, id=257, 715.67375pt x 413.545pt>
 File: figures/spinboxes.png Graphic file (type png)
 <use figures/spinboxes.png>
-Package pdftex.def Info: figures/spinboxes.png used on input line 661.
+Package pdftex.def Info: figures/spinboxes.png used on input line 683.
 (pdftex.def)             Requested size: 357.836pt x 206.77199pt.
-<figures/listbox.png, id=249, 873.2625pt x 440.64626pt>
+[12 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Tem
+plate/REST/vignettes/figures/slider.png>] <figures/listbox.png, id=264, 873.262
+5pt x 440.64626pt>
 File: figures/listbox.png Graphic file (type png)
 <use figures/listbox.png>
-Package pdftex.def Info: figures/listbox.png used on input line 694.
+Package pdftex.def Info: figures/listbox.png used on input line 716.
 (pdftex.def)             Requested size: 436.63017pt x 220.32259pt.
-[12 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Tem
-plate/REST/vignettes/figures/spinboxes.png>] <figures/manualbutton.png, id=256,
+[13 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Tem
+plate/REST/vignettes/figures/spinboxes.png>] <figures/manualbutton.png, id=272,
  741.77126pt x 516.93124pt>
 File: figures/manualbutton.png Graphic file (type png)
 <use figures/manualbutton.png>
-Package pdftex.def Info: figures/manualbutton.png used on input line 739.
+Package pdftex.def Info: figures/manualbutton.png used on input line 761.
 (pdftex.def)             Requested size: 370.88472pt x 258.46498pt.
-[13 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Tem
-plate/REST/vignettes/figures/listbox.png>] [14 <C:/Users/lucp8394/Documents/Sta
+[14 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Tem
+plate/REST/vignettes/figures/listbox.png>] [15 <C:/Users/lucp8394/Documents/Sta
 tFiles/CenStat/R Development/GeneralGUI_Template/REST/vignettes/figures/manualb
-utton.png>] <figures/manualbutton_showsave.png, id=274, 803.0pt x 156.585pt>
+utton.png>] <figures/manualbutton_showsave.png, id=289, 803.0pt x 156.585pt>
 File: figures/manualbutton_showsave.png Graphic file (type png)
 <use figures/manualbutton_showsave.png>
-Package pdftex.def Info: figures/manualbutton_showsave.png used on input line 7
-95.
+Package pdftex.def Info: figures/manualbutton_showsave.png used on input line 8
+17.
 (pdftex.def)             Requested size: 401.49902pt x 78.2923pt.
-Package color Info: Redefining color shadecolor on input line 807.
-<figures/plaidbuilding.png, id=276, 1380.15625pt x 1049.9225pt>
+Package color Info: Redefining color shadecolor on input line 829.
+<figures/plaidbuilding.png, id=291, 1380.15625pt x 1049.9225pt>
 File: figures/plaidbuilding.png Graphic file (type png)
 <use figures/plaidbuilding.png>
-Package pdftex.def Info: figures/plaidbuilding.png used on input line 860.
+Package pdftex.def Info: figures/plaidbuilding.png used on input line 882.
 (pdftex.def)             Requested size: 483.69687pt x 367.959pt.
-[15 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Tem
-plate/REST/vignettes/figures/manualbutton_showsave.png>]
-Package color Info: Redefining color shadecolor on input line 870.
 [16 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Tem
+plate/REST/vignettes/figures/manualbutton_showsave.png>]
+Package color Info: Redefining color shadecolor on input line 892.
+[17 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Tem
 plate/REST/vignettes/figures/plaidbuilding.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 933--939
+Underfull \hbox (badness 10000) in paragraph at lines 955--961
 
  []
 
-Package color Info: Redefining color shadecolor on input line 957.
-<figures/doitandprint_example.png, id=290, 699.61375pt x 531.9875pt>
+Package color Info: Redefining color shadecolor on input line 979.
+<figures/doitandprint_example.png, id=305, 699.61375pt x 531.9875pt>
 File: figures/doitandprint_example.png Graphic file (type png)
 <use figures/doitandprint_example.png>
-Package pdftex.def Info: figures/doitandprint_example.png used on input line 97
-5.
+Package pdftex.def Info: figures/doitandprint_example.png used on input line 99
+7.
 (pdftex.def)             Requested size: 341.43306pt x 259.629pt.
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 981--1013
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 1003--1035
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 981--1013
+Underfull \hbox (badness 10000) in paragraph at lines 1003--1035
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 981--1013
+Underfull \hbox (badness 10000) in paragraph at lines 1003--1035
 
  []
 
-[18 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Tem
+[19 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Tem
 plate/REST/vignettes/figures/doitandprint_example.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1052--1056
+Underfull \hbox (badness 10000) in paragraph at lines 1074--1078
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1061--1086
+Underfull \hbox (badness 10000) in paragraph at lines 1083--1108
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1061--1086
+Underfull \hbox (badness 10000) in paragraph at lines 1083--1108
 
  []
 
-<figures/windowenvir_example.png, id=306, 1121.18875pt x 1042.89626pt>
+<figures/windowenvir_example.png, id=322, 1121.18875pt x 1042.89626pt>
 File: figures/windowenvir_example.png Graphic file (type png)
 <use figures/windowenvir_example.png>
-Package pdftex.def Info: figures/windowenvir_example.png used on input line 109
-0.
+Package pdftex.def Info: figures/windowenvir_example.png used on input line 111
+2.
 (pdftex.def)             Requested size: 483.69687pt x 449.9166pt.
-[19] [20 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGU
+[20] [21 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGU
 I_Template/REST/vignettes/figures/windowenvir_example.png>] <figures/saveGUI.pn
-g, id=321, 846.16125pt x 565.11125pt>
+g, id=336, 846.16125pt x 565.11125pt>
 File: figures/saveGUI.png Graphic file (type png)
 <use figures/saveGUI.png>
-Package pdftex.def Info: figures/saveGUI.png used on input line 1109.
+Package pdftex.def Info: figures/saveGUI.png used on input line 1131.
 (pdftex.def)             Requested size: 256.0748pt x 171.0178pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1102--1111
+Underfull \hbox (badness 10000) in paragraph at lines 1124--1133
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1114--1117
+Underfull \hbox (badness 10000) in paragraph at lines 1136--1139
 
  []
 
-<figures/loadGUI.png, id=323, 846.16125pt x 516.93124pt>
+<figures/loadGUI.png, id=338, 846.16125pt x 516.93124pt>
 File: figures/loadGUI.png Graphic file (type png)
 <use figures/loadGUI.png>
-Package pdftex.def Info: figures/loadGUI.png used on input line 1120.
+Package pdftex.def Info: figures/loadGUI.png used on input line 1142.
 (pdftex.def)             Requested size: 256.0748pt x 156.43726pt.
-[21 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Tem
+[22 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Tem
 plate/REST/vignettes/figures/saveGUI.png> <C:/Users/lucp8394/Documents/StatFile
 s/CenStat/R Development/GeneralGUI_Template/REST/vignettes/figures/loadGUI.png>
 ]
 ("C:\Users\lucp8394\Documents\StatFiles\CenStat\R Development\GeneralGUI_Templa
-te\REST\vignettes\RESTguide.bbl") [22] [23] [24] [25] [26] [27] [28] [29] [30] 
-[31] [32] [33]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1827.
-[34]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1827.
+te\REST\vignettes\RESTguide.bbl") [23] [24] [25] [26] [27] [28] [29] [30] [31] 
+[32] [33] [34]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1850.
+[35]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1850.
 
 ("C:\Users\lucp8394\Documents\StatFiles\CenStat\R Development\GeneralGUI_Templa
 te\REST\vignettes\RESTguide.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1827.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1827.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1850.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1850.
 
 Package rerunfilecheck Info: File `RESTguide.out' has not changed.
-(rerunfilecheck)             Checksum: 0222F52937BC9714CA86FEE43FB97441;1775.
+(rerunfilecheck)             Checksum: 7550F84605648DDE747BC14C6841D364;1839.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1827.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1850.
  ) 
 Here is how much of TeX's memory you used:
- 7508 strings out of 493705
- 108593 string characters out of 3144560
- 209151 words of memory out of 3000000
- 10596 multiletter control sequences out of 15000+200000
+ 7539 strings out of 493705
+ 109088 string characters out of 3144560
+ 211345 words of memory out of 3000000
+ 10619 multiletter control sequences out of 15000+200000
  12691 words of font info for 51 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  29i,8n,32p,392b,457s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -700,9 +703,9 @@ e1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on RESTguide.pdf (34 pages, 1492007 bytes).
+Output written on RESTguide.pdf (35 pages, 1575003 bytes).
 PDF statistics:
- 447 PDF objects out of 1000 (max. 8388607)
- 95 named destinations out of 1000 (max. 500000)
- 309 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 468 PDF objects out of 1000 (max. 8388607)
+ 103 named destinations out of 1000 (max. 500000)
+ 317 words of extra memory for PDF output out of 10000 (max. 10000000)
 
