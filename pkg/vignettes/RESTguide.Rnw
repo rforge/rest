@@ -280,7 +280,9 @@ GUI_WINDOW <- function(list.info=list()){
 	make.seed.button <- TRUE
 	
 	# ... continuation of the script down below (these 2 parts are put here)	
-}
+
+}	# Note: The curly bracket is placed here for syntax reasons. 
+	#       It should be placed after the call of GUI_template.
 @
 \noindent The scripts starts by filling in some information about your
 new window. A clarifying example follows later in which we make a window of the
@@ -441,9 +443,9 @@ Tab <- 2
 # Repeat the 3 steps of tab 1 for as many tabs as you like...
 
 
-#########################################################################
-## USE ALL THE ARGUMENTS ABOUT IN THE GENERAL GUI_TEMPLATE FUNCTION    ##
-#########################################################################
+###################################################################
+## USE ALL THE ARGUMENTS IN THE GENERAL GUI_TEMPLATE FUNCTION    ##
+###################################################################
 GUI_template(dialogtitle=dialogtitle,helppage=helppage,make.resetgws.button=
 		make.resetgws.button,make.setwd.button=make.setwd.button,
 		make.help.button=make.help.button,make.seed.button=make.seed.button,
@@ -842,9 +844,9 @@ grid.rows <- .combine.rows(Tab=Tab,rows=c(2,3),title="Layer Specifications",bord
 #### Plot & Diagnostics Tab has been omitted ###
 
 
-#########################################################################
-## USE ALL THE ARGUMENTS ABOUT IN THE GENERAL GUI_TEMPLATE FUNCTION    ##
-#########################################################################
+###################################################################
+## USE ALL THE ARGUMENTS IN THE GENERAL GUI_TEMPLATE FUNCTION    ##
+###################################################################
 GUI_template(dialogtitle=dialogtitle,helppage=helppage,make.resetgws.button=
 	make.resetgws.button,make.setwd.button=make.setwd.button,make.help.button=
 	make.help.button,make.seed.button=make.seed.button,usetabs=usetabs,tabnames=
@@ -1165,9 +1167,9 @@ GUI_WINDOW <- function(list.info=list()){
     # Repeat what you did for tab 1 for as many tabs as you like...
 	
 	
-    #########################################################################
-    ## USE ALL THE ARGUMENTS ABOUT IN THE GENERAL GUI_TEMPLATE FUNCTION    ##
-    #########################################################################
+    ##################################################################
+    ## USE ALL THE ARGUMENTS IN THE GENERAL GUI_TEMPLATE FUNCTION   ##
+    ##################################################################
     GUI_template(dialogtitle = dialogtitle, helppage = helppage, make.resetgws.button =
         make.resetgws.button, make.setwd.button = make.setwd.button,
         make.help.button = make.help.button, make.seed.button = make.seed.button,
@@ -1541,9 +1543,9 @@ plaid_WINDOW <- function(list.info=list()){
 	# Repeat what you did for tab 1 for as many tabs as you like...
 	
 	
-	#########################################################################
-	## USE ALL THE ARGUMENTS ABOUT IN THE GENERAL GUI_TEMPLATE FUNCTION    ##
-	#########################################################################
+	###################################################################
+	## USE ALL THE ARGUMENTS IN THE GENERAL GUI_TEMPLATE FUNCTION    ##
+	###################################################################
 	GUI_template(dialogtitle=dialogtitle,helppage=helppage,make.resetgws.button=
       make.resetgws.button,make.setwd.button=make.setwd.button,make.help.button=
       make.help.button,make.seed.button=make.seed.button,usetabs=usetabs,tabnames=
@@ -1645,9 +1647,9 @@ main_WINDOW <- function(list.info=list()){
 		
 	### 3. COMBINING THE ROWS ###
 	
-	#########################################################################
-	## USE ALL THE ARGUMENTS ABOUT IN THE GENERAL GUI_TEMPLATE FUNCTION    ##
-	#########################################################################
+	###################################################################
+	## USE ALL THE ARGUMENTS IN THE GENERAL GUI_TEMPLATE FUNCTION    ##
+	###################################################################
 	GUI_template(dialogtitle=dialogtitle,helppage=helppage,make.resetgws.button=
     make.resetgws.button,make.setwd.button=make.setwd.button,make.help.button=
     make.help.button,make.seed.button=make.seed.button,usetabs=usetabs,tabnames=
@@ -1751,9 +1753,9 @@ choose_WINDOW <- function(){
 	
 	### 3. COMBINING THE ROWS ###
 	
-	#########################################################################
-	## USE ALL THE ARGUMENTS ABOUT IN THE GENERAL GUI_TEMPLATE FUNCTION    ##
-	#########################################################################
+	##################################################################
+	## USE ALL THE ARGUMENTS IN THE GENERAL GUI_TEMPLATE FUNCTION   ##
+	##################################################################
 	GUI_template(dialogtitle=dialogtitle,helppage=helppage,make.resetgws.button=
     make.resetgws.button,make.setwd.button=make.setwd.button,make.help.button=
     make.help.button,make.seed.button=make.seed.button,usetabs=usetabs,tabnames=

@@ -173,9 +173,9 @@ plaid_WINDOW <- function(list.info=list()){
 	# Repeat what you did for tab 1 for as many tabs as you like...
 	
 	
-	#########################################################################
-	## USE ALL THE ARGUMENTS ABOUT IN THE GENERAL GUI_TEMPLATE FUNCTION    ##
-	#########################################################################
+	###################################################################
+	## USE ALL THE ARGUMENTS IN THE GENERAL GUI_TEMPLATE FUNCTION    ##
+	###################################################################
 	GUI_template(dialogtitle=dialogtitle,helppage=helppage,make.resetgws.button=make.resetgws.button,make.setwd.button=make.setwd.button,make.help.button=make.help.button,make.seed.button=make.seed.button,usetabs=usetabs,tabnames=tabnames,grid.config=grid.config,grid.rows=grid.rows,new.frames=new.frames)
 	
 }

@@ -331,7 +331,9 @@ store information about the window that you are about to create.
         \hlstd{make.seed.button} \hlkwb{<-} \hlnum{TRUE}
 
         \hlcom{# ... continuation of the script down below (these 2 parts are put here)	}
-\hlstd{\}}
+
+\hlstd{\}}       \hlcom{# Note: The curly bracket is placed here for syntax reasons. }
+        \hlcom{#       It should be placed after the call of GUI_template.}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
@@ -499,9 +501,9 @@ multiple times until the desired result is obtained.
 \hlcom{# Repeat the 3 steps of tab 1 for as many tabs as you like...}
 
 
-\hlcom{#########################################################################}
-\hlcom{## USE ALL THE ARGUMENTS ABOUT IN THE GENERAL GUI_TEMPLATE FUNCTION    ##}
-\hlcom{#########################################################################}
+\hlcom{###################################################################}
+\hlcom{## USE ALL THE ARGUMENTS IN THE GENERAL GUI_TEMPLATE FUNCTION    ##}
+\hlcom{###################################################################}
 \hlkwd{GUI_template}\hlstd{(}\hlkwc{dialogtitle}\hlstd{=dialogtitle,}\hlkwc{helppage}\hlstd{=helppage,}\hlkwc{make.resetgws.button}\hlstd{=}
                 \hlstd{make.resetgws.button,}\hlkwc{make.setwd.button}\hlstd{=make.setwd.button,}
                 \hlkwc{make.help.button}\hlstd{=make.help.button,}\hlkwc{make.seed.button}\hlstd{=make.seed.button,}
@@ -907,9 +909,9 @@ and third row are made into a box with border and {\it Layer Specifications} tit
 \hlcom{#### Plot & Diagnostics Tab has been omitted ###}
 
 
-\hlcom{#########################################################################}
-\hlcom{## USE ALL THE ARGUMENTS ABOUT IN THE GENERAL GUI_TEMPLATE FUNCTION    ##}
-\hlcom{#########################################################################}
+\hlcom{###################################################################}
+\hlcom{## USE ALL THE ARGUMENTS IN THE GENERAL GUI_TEMPLATE FUNCTION    ##}
+\hlcom{###################################################################}
 \hlkwd{GUI_template}\hlstd{(}\hlkwc{dialogtitle}\hlstd{=dialogtitle,}\hlkwc{helppage}\hlstd{=helppage,}\hlkwc{make.resetgws.button}\hlstd{=}
         \hlstd{make.resetgws.button,}\hlkwc{make.setwd.button}\hlstd{=make.setwd.button,}\hlkwc{make.help.button}\hlstd{=}
         \hlstd{make.help.button,}\hlkwc{make.seed.button}\hlstd{=make.seed.button,}\hlkwc{usetabs}\hlstd{=usetabs,}\hlkwc{tabnames}\hlstd{=}
@@ -1235,9 +1237,9 @@ GUI_WINDOW <- function(list.info=list()){
     # Repeat what you did for tab 1 for as many tabs as you like...
 	
 	
-    #########################################################################
-    ## USE ALL THE ARGUMENTS ABOUT IN THE GENERAL GUI_TEMPLATE FUNCTION    ##
-    #########################################################################
+    ##################################################################
+    ## USE ALL THE ARGUMENTS IN THE GENERAL GUI_TEMPLATE FUNCTION   ##
+    ##################################################################
     GUI_template(dialogtitle = dialogtitle, helppage = helppage, make.resetgws.button =
         make.resetgws.button, make.setwd.button = make.setwd.button,
         make.help.button = make.help.button, make.seed.button = make.seed.button,
@@ -1611,9 +1613,9 @@ plaid_WINDOW <- function(list.info=list()){
 	# Repeat what you did for tab 1 for as many tabs as you like...
 	
 	
-	#########################################################################
-	## USE ALL THE ARGUMENTS ABOUT IN THE GENERAL GUI_TEMPLATE FUNCTION    ##
-	#########################################################################
+	###################################################################
+	## USE ALL THE ARGUMENTS IN THE GENERAL GUI_TEMPLATE FUNCTION    ##
+	###################################################################
 	GUI_template(dialogtitle=dialogtitle,helppage=helppage,make.resetgws.button=
       make.resetgws.button,make.setwd.button=make.setwd.button,make.help.button=
       make.help.button,make.seed.button=make.seed.button,usetabs=usetabs,tabnames=
@@ -1715,9 +1717,9 @@ main_WINDOW <- function(list.info=list()){
 		
 	### 3. COMBINING THE ROWS ###
 	
-	#########################################################################
-	## USE ALL THE ARGUMENTS ABOUT IN THE GENERAL GUI_TEMPLATE FUNCTION    ##
-	#########################################################################
+	###################################################################
+	## USE ALL THE ARGUMENTS IN THE GENERAL GUI_TEMPLATE FUNCTION    ##
+	###################################################################
 	GUI_template(dialogtitle=dialogtitle,helppage=helppage,make.resetgws.button=
     make.resetgws.button,make.setwd.button=make.setwd.button,make.help.button=
     make.help.button,make.seed.button=make.seed.button,usetabs=usetabs,tabnames=
@@ -1821,9 +1823,9 @@ choose_WINDOW <- function(){
 	
 	### 3. COMBINING THE ROWS ###
 	
-	#########################################################################
-	## USE ALL THE ARGUMENTS ABOUT IN THE GENERAL GUI_TEMPLATE FUNCTION    ##
-	#########################################################################
+	##################################################################
+	## USE ALL THE ARGUMENTS IN THE GENERAL GUI_TEMPLATE FUNCTION   ##
+	##################################################################
 	GUI_template(dialogtitle=dialogtitle,helppage=helppage,make.resetgws.button=
     make.resetgws.button,make.setwd.button=make.setwd.button,make.help.button=
     make.help.button,make.seed.button=make.seed.button,usetabs=usetabs,tabnames=
