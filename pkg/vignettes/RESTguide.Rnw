@@ -26,6 +26,7 @@
 
 \title{RcmdrPlugin Easy Script Templates 0.2.0}
 \author{Ewoud De Troyer}
+\date{}
 
 \begin{document}
 
@@ -232,8 +233,9 @@ transform it to a matrix if your function requires this.
 
 \noindent {\it Short Summary:}
 \begin{enumerate}
+  \item \texttt{DESCRIPTION} and \texttt{NAMESPACE} file
   \item Add \texttt{.onAttach} function
-  \item Create window functions
+  \item Create window functions with {\it template scripts}
   \item Add window functions to \texttt{menus.txt}
 \end{enumerate}
 
@@ -268,7 +270,7 @@ GUI_WINDOW <- function(list.info=list()){
 	new.frames <- .initialize.new.frames(ntabs)
 	grid.config <- .initialize.grid.config(ntabs)
 	grid.rows <- .initialize.grid.rows(ntabs)
-	###
+	### end of "Do not change these lines"
 	
 	##################
 	## GRID BUTTONS ##
@@ -397,6 +399,8 @@ generated.
   \item Entry Fields
   \item Sliders
   \item Spinboxes
+  \item List Box
+  \item Manual Button
 \end{itemize}
 \noindent In future updates, there is still the possibility to add even more
 types if required.
