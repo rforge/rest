@@ -24,7 +24,7 @@
 }
 
 
-\title{RcmdrPlugin Easy Script Templates 0.2.0}
+\title{RcmdrPlugin Easy Script Templates 1.0.0}
 \author{Ewoud De Troyer}
 \date{}
 

@@ -1,8 +1,8 @@
 Package: REST
 Type: Package
 Title: RcmdrPlugin Easy Script Templates
-Version: 0.2.0
-Date: 2015-03-17
+Version: 1.0.0
+Date: 2015-04-13
 Author: De Troyer Ewoud
 Maintainer: De Troyer Ewoud <ewoud.detroyer@uhasselt.be>
 Description: 'RcmdrPlugin Easy Script Templates' contains easy scripts which can be used to quickly create GUI windows for RcmdrPlugins. No knowledge about Tcl/Tk is required to make use of these scripts. (These scripts are a generalisation of the template scripts in the RcmdrPlugin.BiclustGUI package)
