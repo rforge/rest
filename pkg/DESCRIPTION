@@ -1,7 +1,7 @@
 Package: REST
 Type: Package
 Title: RcmdrPlugin Easy Script Templates
-Version: 1.0.0
+Version: 1.0.1
 Date: 2015-04-14
 Author: De Troyer Ewoud
 Maintainer: De Troyer Ewoud <ewoud.detroyer@uhasselt.be>

@@ -608,11 +608,11 @@ GUI_template <- function(dialogtitle="",helppage="",usetabs=FALSE,tabnames=c(),m
 		
 
 	if(usetabs==TRUE){
-		dialogSuffix(use.tabs=TRUE, grid.buttons=TRUE,onOK=onOK,tabs=tabs,tab.names=tabnames)
+		dialogSuffix(use.tabs=TRUE, grid.buttons=TRUE,onOK=onOK,tabs=tabs,tab.names=tabnames,preventGrabFocus=TRUE)
 		
 	}
 	else{
-		dialogSuffix(use.tabs=FALSE,onOK=onOK)
+		dialogSuffix(use.tabs=FALSE,onOK=onOK,preventGrabFocus=TRUE)
 	}
 }
 
