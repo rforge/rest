@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.20)  14 APR 2015 16:35
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.10.20)  15 APR 2015 11:27
 entering extended mode
 **C:/Users/lucp8394/Documents/StatFiles/CenStat/R*Development/GeneralGUI_Templa
 te/REST/vignettes/RESTguide.tex
@@ -559,14 +559,14 @@ File: figures/spinboxes.png Graphic file (type png)
 Package pdftex.def Info: figures/spinboxes.png used on input line 689.
 (pdftex.def)             Requested size: 357.836pt x 206.77199pt.
 [12 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Tem
-plate/REST/vignettes/figures/slider.png>] <figures/listbox.png, id=265, 873.262
+plate/REST/vignettes/figures/slider.png>] <figures/listbox.png, id=264, 873.262
 5pt x 440.64626pt>
 File: figures/listbox.png Graphic file (type png)
 <use figures/listbox.png>
 Package pdftex.def Info: figures/listbox.png used on input line 722.
 (pdftex.def)             Requested size: 436.63017pt x 220.32259pt.
 [13 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Tem
-plate/REST/vignettes/figures/spinboxes.png>] <figures/manualbutton.png, id=273,
+plate/REST/vignettes/figures/spinboxes.png>] <figures/manualbutton.png, id=272,
  741.77126pt x 516.93124pt>
 File: figures/manualbutton.png Graphic file (type png)
 <use figures/manualbutton.png>
@@ -575,14 +575,14 @@ Package pdftex.def Info: figures/manualbutton.png used on input line 767.
 [14 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGUI_Tem
 plate/REST/vignettes/figures/listbox.png>] [15 <C:/Users/lucp8394/Documents/Sta
 tFiles/CenStat/R Development/GeneralGUI_Template/REST/vignettes/figures/manualb
-utton.png>] <figures/manualbutton_showsave.png, id=290, 803.0pt x 156.585pt>
+utton.png>] <figures/manualbutton_showsave.png, id=289, 803.0pt x 156.585pt>
 File: figures/manualbutton_showsave.png Graphic file (type png)
 <use figures/manualbutton_showsave.png>
 Package pdftex.def Info: figures/manualbutton_showsave.png used on input line 8
 23.
 (pdftex.def)             Requested size: 401.49902pt x 78.2923pt.
 Package color Info: Redefining color shadecolor on input line 835.
-<figures/plaidbuilding.png, id=292, 1380.15625pt x 1049.9225pt>
+<figures/plaidbuilding.png, id=291, 1380.15625pt x 1049.9225pt>
 File: figures/plaidbuilding.png Graphic file (type png)
 <use figures/plaidbuilding.png>
 Package pdftex.def Info: figures/plaidbuilding.png used on input line 888.
@@ -597,7 +597,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 961--967
  []
 
 Package color Info: Redefining color shadecolor on input line 985.
-<figures/doitandprint_example.png, id=306, 699.61375pt x 531.9875pt>
+<figures/doitandprint_example.png, id=305, 699.61375pt x 531.9875pt>
 File: figures/doitandprint_example.png Graphic file (type png)
 <use figures/doitandprint_example.png>
 Package pdftex.def Info: figures/doitandprint_example.png used on input line 10
@@ -634,7 +634,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1089--1114
 
  []
 
-<figures/windowenvir_example.png, id=323, 1121.18875pt x 1042.89626pt>
+<figures/windowenvir_example.png, id=322, 1121.18875pt x 1042.89626pt>
 File: figures/windowenvir_example.png Graphic file (type png)
 <use figures/windowenvir_example.png>
 Package pdftex.def Info: figures/windowenvir_example.png used on input line 111
@@ -642,7 +642,7 @@ Package pdftex.def Info: figures/windowenvir_example.png used on input line 111
 (pdftex.def)             Requested size: 483.69687pt x 449.9166pt.
 [20] [21 <C:/Users/lucp8394/Documents/StatFiles/CenStat/R Development/GeneralGU
 I_Template/REST/vignettes/figures/windowenvir_example.png>] <figures/saveGUI.pn
-g, id=337, 846.16125pt x 565.11125pt>
+g, id=336, 846.16125pt x 565.11125pt>
 File: figures/saveGUI.png Graphic file (type png)
 <use figures/saveGUI.png>
 Package pdftex.def Info: figures/saveGUI.png used on input line 1137.
@@ -657,7 +657,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1142--1145
 
  []
 
-<figures/loadGUI.png, id=339, 846.16125pt x 516.93124pt>
+<figures/loadGUI.png, id=338, 846.16125pt x 516.93124pt>
 File: figures/loadGUI.png Graphic file (type png)
 <use figures/loadGUI.png>
 Package pdftex.def Info: figures/loadGUI.png used on input line 1148.
@@ -704,9 +704,9 @@ e1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on RESTguide.pdf (35 pages, 741891 bytes).
+Output written on RESTguide.pdf (35 pages, 715265 bytes).
 PDF statistics:
- 469 PDF objects out of 1000 (max. 8388607)
+ 468 PDF objects out of 1000 (max. 8388607)
  104 named destinations out of 1000 (max. 500000)
  317 words of extra memory for PDF output out of 10000 (max. 10000000)
 
